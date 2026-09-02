@@ -1,0 +1,165 @@
+<title>Axion Email Graphics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.egrid{display:grid;gap:30px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.ecard{background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.ecard img{width:100%;display:block;background:var(--sunk)}
+.ecard .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:7px}
+.ecard h3{font-family:var(--display);font-size:16.5px;margin:0;color:var(--ink)}
+.ecard p{margin:0;font-size:13.5px;color:var(--ink2);line-height:1.55}
+.ecard .k{font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase}
+.gap{background:var(--flag-bg);border:1px dashed var(--flag);border-radius:14px;padding:18px 20px}
+.gap h3{font-family:var(--display);font-size:16.5px;margin:0 0 5px;color:var(--flag)}
+.gap p{margin:0;font-size:13.5px;color:var(--ink2)}
+.back{display:inline-block;margin-top:6px;font-size:13.5px;color:var(--accent)}</style>
+<div class="wrap">
+<header class="mast">
+<p class="eyebrow">Axion Research &middot; welcome flow</p>
+<h1>Email graphics</h1>
+<p class="sub">Mobile first, built for the inside of the email. None of these carry the logo, the button or the research use line: those go in the email as live text so the first screen still works when images are blocked, and so the button is actually clickable and trackable.</p>
+<a class="back" href="./">&larr; the static ad set</a>
+</header>
+<section><div class="egrid">
+<figure class="ecard">
+<img src="email-full/email-hero-product--clinical-glass-1x1.png" alt="Welcome email 1, hero">
+<figcaption class="body">
+<span class="k">hero-product</span>
+<h3>Welcome email 1, hero</h3>
+<p>Top of the first send, above the headline. Its whole job is to prove in half a second that this is a real brand with real product before anyone reads a word.</p>
+</figcaption></figure>
+<figure class="ecard">
+<img src="email-full/email-offer-ground--clinical-glass-1x1.png" alt="Welcome email 1, the offer">
+<figcaption class="body">
+<span class="k">offer-ground</span>
+<h3>Welcome email 1, the offer</h3>
+<p>Carries the discount as designed type. The button underneath is real HTML so it is clickable and trackable, and the code is repeated as live text so it survives images being blocked.</p>
+</figcaption></figure>
+<figure class="ecard">
+<img src="email-full/email-bench-proof--clinical-glass-1x1.png" alt="Welcome email 2, provenance">
+<figcaption class="body">
+<span class="k">bench-proof</span>
+<h3>Welcome email 2, provenance</h3>
+<p>Answers the buyer&#x27;s actual anxiety: where did this come from and did anyone check it. Built from Axion&#x27;s own documentation story, not a generic lab shot.</p>
+</figcaption></figure>
+<figure class="ecard">
+<img src="email-full/email-purity-macro--clinical-glass-1x1.png" alt="Welcome email 2, the material">
+<figcaption class="body">
+<span class="k">purity-macro</span>
+<h3>Welcome email 2, the material</h3>
+<p>Shows the thing the brand claims instead of asserting it, so the reader draws the conclusion themselves. Carries no number, because a number has to be true of the specific SKU.</p>
+</figcaption></figure>
+<figure class="ecard">
+<img src="email-full/email-us-vs-them--clinical-glass-1x1.png" alt="Welcome email 3, the comparison">
+<figcaption class="body">
+<span class="k">us-vs-them</span>
+<h3>Welcome email 3, the comparison</h3>
+<p>A side by side that makes the alternative look like the mistake. Never names or depicts a real competitor.</p>
+</figcaption></figure>
+</div></section>
+</div>
