@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Axion Research - email graphics v2</title>
+<style>
+  :root{--bg:#0B0F1A;--panel:#141A2A;--ink:#EEF2FB;--dim:#98A2C0;--line:#26304A;--accent:#6E8BFF;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:44px 20px 90px;}
+  h1{font-size:30px;line-height:1.2;margin:0 0 10px;letter-spacing:-.4px;}
+  .sub{color:var(--dim);margin:0 0 30px;max-width:760px;}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+        border-radius:10px;padding:16px 18px;margin:0 0 34px;max-width:860px;color:var(--dim);}
+  .note b{color:var(--ink);}
+  h2{font-size:19px;margin:44px 0 4px;letter-spacing:-.2px;}
+  .job{color:var(--dim);font-size:14px;margin:0 0 18px;max-width:760px;}
+  .pair{display:flex;gap:34px;align-items:flex-start;flex-wrap:wrap;margin-bottom:16px;}
+  .cap{font-size:11px;letter-spacing:2px;color:var(--dim);text-transform:uppercase;margin:0 0 8px;}
+  /* The desktop email column, at the real 600px it renders at. */
+  .desk{width:600px;max-width:100%;}
+  .desk .frame{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+  /* A phone at a real 375px viewport, which is where most of these get opened. */
+  .phone{width:375px;max-width:100%;}
+  .phone .frame{background:#fff;border-radius:22px;overflow:hidden;border:6px solid #222A3D;}
+  img{display:block;width:100%;height:auto;}
+  .bar{background:#020C50;color:#fff;font-size:11px;letter-spacing:2px;text-align:center;padding:11px 8px;}
+  .body{padding:22px 26px 26px;background:#fff;color:#020C50;text-align:center;}
+  .body .h{font-size:26px;line-height:1.2;margin:0 0 8px;font-weight:700;}
+  .body .p{font-size:14px;line-height:1.55;color:#49527A;margin:0 0 16px;}
+  .body .btn{display:inline-block;background:#204DA3;color:#fff;text-decoration:none;
+             padding:14px 28px;border-radius:6px;font-size:14px;font-weight:700;letter-spacing:1px;}
+  .body .fine{font-size:11px;color:#5F6889;margin:16px 0 0;}
+  footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px;}
+  @media (max-width:900px){.pair{gap:22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Axion Research, email graphics v2</h1>
+  <p class="sub">Rebuilt after your review. Every graphic now runs the full width of the email
+  with no gutter and no rounded cutout, and each one is portrait so it fills a phone screen
+  rather than sitting in the middle of one. Shown below at the real 600px desktop column and
+  at a real 375px phone width.</p>
+
+  <div class="note">
+    <b>What changed.</b> v1 rendered square graphics that were placed at 320px inside a 600px
+    column that already had padding on both sides, so they read as small cutouts stitched into
+    a text email. These are portrait, full bleed, edge to edge.<br><br>
+    <b>What is still live text, on purpose.</b> The button and the research use line are real
+    HTML under the artwork, not part of the picture. Outlook and much of Apple Mail block
+    images by default, so anything living only inside the graphic disappears for a chunk of
+    the list. The headline and the offer do sit in the artwork, the way your references do.<br><br>
+    <b>No promo code is baked into any of these.</b> Putting the code in the picture welds the
+    artwork to one coupon, so if the code is renamed or never created the graphic has to be
+    re-rendered. It lives in the email as text where it is a free edit.
+  </div>
+
+  <h2>1. Welcome, email 1</h2>
+  <p class="job">Establishes the brand and the range in half a second, and carries the first
+  order offer. The three best sellers, their own labels, their own coded names.</p>
+  <div class="pair">
+    <div class="desk">
+      <p class="cap">Desktop, 600px</p>
+      <div class="frame">
+        <div class="bar">FREE SHIPPING ON ORDERS OVER $150</div>
+        <img src="email-full/email-hero-product--clinical-glass-4x5.png" alt="Three Axion Research vials on a steel bench, 10% off first order">
+        <div class="body">
+          <div class="h">Purity you can check yourself.</div>
+          <p class="p">Every vial is documented against the lot it came from, so the paperwork
+          is something you read before you order rather than after.</p>
+          <a class="btn" href="#">CLAIM 10% OFF</a>
+          <p class="fine">For research use only. Not for human or animal consumption.</p>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <p class="cap">Phone, 375px</p>
+      <div class="frame">
+        <div class="bar">FREE SHIPPING OVER $150</div>
+        <img src="email-full/email-hero-product--clinical-glass-4x5.png" alt="Three Axion Research vials, mobile view">
+        <div class="body">
+          <div class="h">Purity you can check yourself.</div>
+          <p class="p">Documented against the lot it came from.</p>
+          <a class="btn" href="#">CLAIM 10% OFF</a>
+          <p class="fine">For research use only. Not for human or animal consumption.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>2. Welcome, email 2. The provenance graphic</h2>
+  <p class="job">Answers the real question, which is whether anyone actually checked what is in
+  the bottle. Deliberately a different camera and a single vial, so the set stops repeating itself.</p>
+  <div class="pair">
+    <div class="desk">
+      <p class="cap">Desktop, 600px</p>
+      <div class="frame">
+        <img src="email-full/email-bench-proof--clinical-glass-4x5.png" alt="A single Axion Research ARP2-TZ vial, documented lot by lot">
+        <div class="body">
+          <div class="h">Every lot has paperwork.</div>
+          <p class="p">A report number, an access code, and a laboratory that will confirm it
+          for you.</p>
+          <a class="btn" href="#">SEE THE DOCUMENTATION</a>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <p class="cap">Phone, 375px</p>
+      <div class="frame">
+        <img src="email-full/email-bench-proof--clinical-glass-4x5.png" alt="Single vial, mobile view">
+        <div class="body">
+          <div class="h">Every lot has paperwork.</div>
+          <p class="p">A report number and an access code you can check.</p>
+          <a class="btn" href="#">SEE THE DOCUMENTATION</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>3. The comparison</h2>
+  <p class="job">Stacked rather than side by side, which is the mobile fix: a left and right
+  split gives each side about 170px on a phone, and the v1 version became unreadable there.</p>
+  <div class="pair">
+    <div class="desk">
+      <p class="cap">Desktop, 600px</p>
+      <div class="frame">
+        <img src="email-full/email-us-vs-them--clinical-glass-4x5.png" alt="Axion Research vial compared against an unlabelled vial">
+        <div class="body">
+          <div class="h">A blank label tells you nothing.</div>
+          <a class="btn" href="#">SHOP THE RANGE</a>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <p class="cap">Phone, 375px</p>
+      <div class="frame">
+        <img src="email-full/email-us-vs-them--clinical-glass-4x5.png" alt="Comparison graphic, mobile view">
+        <div class="body">
+          <div class="h">A blank label tells you nothing.</div>
+          <a class="btn" href="#">SHOP THE RANGE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>4. The material</h2>
+  <p class="job">Shows the compound instead of claiming anything about it. Carries no type at
+  all, on purpose, and it is the most visually different of the four.</p>
+  <div class="pair">
+    <div class="desk">
+      <p class="cap">Desktop, 600px</p>
+      <div class="frame">
+        <img src="email-full/email-purity-macro--clinical-glass-4x5.png" alt="Macro of the lyophilised compound in the base of a vial">
+        <div class="body">
+          <div class="h">Look at the material.</div>
+          <p class="p">Fine, even, and documented to the lot it came from.</p>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <p class="cap">Phone, 375px</p>
+      <div class="frame">
+        <img src="email-full/email-purity-macro--clinical-glass-4x5.png" alt="Macro of the compound, mobile view">
+        <div class="body">
+          <div class="h">Look at the material.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Built by Approved Scale for Axion Research. The copy under each graphic is the live text
+    that sits in the email, shown here so the whole block can be judged together.
+    The v1 set is still at <a style="color:var(--accent)" href="email.html">email.html</a>.
+  </footer>
+
+</div>
+</body>
+</html>
