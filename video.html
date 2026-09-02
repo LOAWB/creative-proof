@@ -38,9 +38,9 @@ footer{margin-top:34px;font-family:var(--mono);font-size:11px;color:var(--ink3)}
 </style>
 <div class="wrap">
 <p class="eyebrow">Axion Research &middot; motion tests</p>
-<h1>Two test clips, both flawed, both useful</h1>
-<p class="sub">Neither of these is a finished ad. They were run one at a time to isolate one
-problem each, which is why the second one is better than the first. Sound is on both.</p>
+<h1>Three clips, and the third one works</h1>
+<p class="sub">Run one at a time, each isolating a single problem, which is why they get better
+left to right. The third is a usable ad. Sound is on all three.</p>
 <p class="sub"><a href="./">&larr; back to the statics</a></p>
 
 <div class="grid">
@@ -71,6 +71,19 @@ problem each, which is why the second one is better than the first. Sound is on 
       invitation to cover the label.</p>
     </div>
   </div>
+  <div class="card">
+    <video controls preload="metadata" playsinline src="video/03-occlusion-fixed.mp4"></video>
+    <div class="cap">
+      <p class="key">clip 03 &middot; $0.80 &middot; usable</p>
+      <h3>Foreground pinned to the edges</h3>
+      <span class="tag t-ok">frame filled</span><span class="tag t-ok">label legible throughout</span><span class="tag t-ok">vial count holds</span>
+      <p>Same concept as clip 02 with the brief corrected: foreground glassware is confined to the
+      extreme left and right edges, nothing may cross the product, and the vial count is fixed. The
+      flask is gone, the two extra vials are gone, and the wordmark stays readable from the first
+      frame to the last. Checked by sampling a frame every half second across the whole clip and
+      reading the label back out of each one, not by looking at the start and the end.</p>
+    </div>
+  </div>
 </div>
 
 <div class="note">
@@ -81,11 +94,14 @@ problem each, which is why the second one is better than the first. Sound is on 
     <li><strong>Seeding means the product exists in frame one.</strong> Any concept where the
     product arrives, is revealed, or drops into shot is impossible forward. Those get rendered
     backwards and the file flipped, which costs nothing extra.</li>
-    <li><strong>Foreground elements have to stay at the frame edges.</strong> The rule is now
-    written into every motion prompt: nothing crosses in front of the product, and the vial count
-    can never change.</li>
+    <li><strong>Foreground elements have to stay at the frame edges.</strong> Written into every
+    motion prompt: nothing crosses in front of the product, and the vial count can never change.
+    Clip 03 confirms it took.</li>
+    <li><strong>A clip that is clean at both ends can still be ruined in the middle.</strong> Clip
+    02 was perfect at zero seconds and perfect at the end, and had the wordmark covered at four.
+    Every clip is now checked frame by frame across its whole length rather than spot checked.</li>
   </ul>
 </div>
 
-<footer>Axion Research &middot; motion tests 01 and 02 &middot; 8s, 720&times;1280, 24fps, native audio &middot; $1.80 spent</footer>
+<footer>Axion Research &middot; motion tests 01 to 03 &middot; 8s, 720&times;1280, 24fps, native audio &middot; $2.60 spent</footer>
 </div>
