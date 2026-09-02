@@ -1,0 +1,91 @@
+<!-- Axion motion tests, revision 1 -->
+<title>Axion Motion Tests</title>
+<style>
+:root{--ground:#ECEDEA;--panel:#FFF;--ink:#16181A;--ink2:#5C6469;--ink3:#878E92;
+--rule:#D3D7D2;--bad:#8A2B2B;--bad-bg:#F6E9E9;--ok:#2F6B4F;--ok-bg:#E6EFE9;
+--display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+--body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+--ground:#101211;--panel:#191C1B;--ink:#E9ECE9;--ink2:#9BA3A3;--ink3:#727A7A;
+--rule:#2A2E2D;--bad:#D98C8C;--bad-bg:#2A1717;--ok:#7FBF9C;--ok-bg:#16241D;}}
+:root[data-theme="dark"]{--ground:#101211;--panel:#191C1B;--ink:#E9ECE9;--ink2:#9BA3A3;
+--ink3:#727A7A;--rule:#2A2E2D;--bad:#D98C8C;--bad-bg:#2A1717;--ok:#7FBF9C;--ok-bg:#16241D;}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);margin:0;
+line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:40px 22px 70px}
+h1{font-family:var(--display);font-size:30px;margin:0 0 6px;letter-spacing:-.01em}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;
+color:var(--ink3);margin:0 0 10px}
+.sub{color:var(--ink2);margin:0 0 8px;max-width:66ch}
+a{color:inherit}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:30px}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:14px;overflow:hidden;
+display:flex;flex-direction:column}
+video{width:100%;display:block;background:#000}
+.cap{padding:16px 18px 18px}
+.cap h3{font-family:var(--display);font-size:17px;margin:0 0 2px}
+.key{font-family:var(--mono);font-size:11px;color:var(--ink3);margin:0 0 8px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;padding:3px 8px;border-radius:20px;
+margin:0 5px 6px 0;letter-spacing:.03em}
+.t-bad{background:var(--bad-bg);color:var(--bad)}
+.t-ok{background:var(--ok-bg);color:var(--ok)}
+.cap p{margin:8px 0 0;font-size:13.5px;color:var(--ink2)}
+.note{margin-top:34px;background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:20px 22px}
+.note h2{font-family:var(--display);font-size:18px;margin:0 0 10px}
+.note li{font-size:13.5px;color:var(--ink2);margin-bottom:9px}
+footer{margin-top:34px;font-family:var(--mono);font-size:11px;color:var(--ink3)}
+</style>
+<div class="wrap">
+<p class="eyebrow">Axion Research &middot; motion tests</p>
+<h1>Two test clips, both flawed, both useful</h1>
+<p class="sub">Neither of these is a finished ad. They were run one at a time to isolate one
+problem each, which is why the second one is better than the first. Sound is on both.</p>
+<p class="sub"><a href="./">&larr; back to the statics</a></p>
+
+<div class="grid">
+  <div class="card">
+    <video controls preload="metadata" playsinline src="video/01-square-plate-letterboxed.mp4"></video>
+    <div class="cap">
+      <p class="key">clip 01 &middot; $0.80</p>
+      <h3>Seeded from the square master</h3>
+      <span class="tag t-bad">letterboxed</span><span class="tag t-bad">no reveal</span><span class="tag t-bad">label drift</span>
+      <p>Unusable. The picture is a 720&times;720 square floating in a 720&times;1280 frame, so
+      44% of it is black bars. Cause: it was seeded from the square product shot and the model kept
+      that shape instead of filling the tall frame. The vapour reveal also never happens, because
+      when you seed from a still, that still is the first frame, so it cannot open on a hidden
+      product. Around three seconds the left vial's blue band washes out.</p>
+    </div>
+  </div>
+  <div class="card">
+    <video controls preload="metadata" playsinline src="video/02-vertical-plate-fixed.mp4"></video>
+    <div class="cap">
+      <p class="key">clip 02 &middot; $0.80 &middot; after a $0.20 vertical master</p>
+      <h3>Seeded from a vertical master</h3>
+      <span class="tag t-ok">frame filled</span><span class="tag t-ok">label holds at both ends</span><span class="tag t-bad">mid-clip occlusion</span>
+      <p>The framing problem is gone: the picture now fills 720&times;1272 of the 720&times;1280
+      frame. The logo is correct and readable at the start and the end. What breaks is the middle:
+      around four seconds a blurred flask sweeps across and covers the wordmark, and the model
+      invents two extra vials behind. That is my brief's fault, not the tool's. It asked for
+      foreground glassware to travel between the camera and the product, which is an open
+      invitation to cover the label.</p>
+    </div>
+  </div>
+</div>
+
+<div class="note">
+  <h2>What the two clips actually bought</h2>
+  <ul>
+    <li><strong>A vertical master fixes framing.</strong> Confirmed by measurement, not by eye:
+    content area went from 720&times;720 to 720&times;1272.</li>
+    <li><strong>Seeding means the product exists in frame one.</strong> Any concept where the
+    product arrives, is revealed, or drops into shot is impossible forward. Those get rendered
+    backwards and the file flipped, which costs nothing extra.</li>
+    <li><strong>Foreground elements have to stay at the frame edges.</strong> The rule is now
+    written into every motion prompt: nothing crosses in front of the product, and the vial count
+    can never change.</li>
+  </ul>
+</div>
+
+<footer>Axion Research &middot; motion tests 01 and 02 &middot; 8s, 720&times;1280, 24fps, native audio &middot; $1.80 spent</footer>
+</div>
