@@ -1,0 +1,283 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fortique Labs, email graphics v2</title>
+<style>
+:root{--ground:#12120F;--card:#1B1B17;--ink:#F2EFE7;--ink2:#B9B3A4;
+ --ink3:#7E7869;--rule:#2C2B25;--gold:#C6A45E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ padding:34px 20px 90px}
+.wrap{max-width:1180px;margin:0 auto}
+.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+ color:var(--ink3);font-family:ui-monospace,Menlo,monospace}
+h1{font-size:clamp(28px,4.4vw,42px);line-height:1.08;margin:12px 0 14px;
+ font-weight:600;letter-spacing:-.02em}
+.sub{color:var(--ink2);max-width:64ch;font-size:15.5px}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);
+ border-radius:3px;margin:26px 0 6px}
+.run{padding:12px 20px;border-right:1px solid var(--rule);flex:1 1 auto}
+.run:last-child{border-right:0}
+.run dt{font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+ color:var(--ink3);font-family:ui-monospace,Menlo,monospace;margin-bottom:3px}
+.run dd{font-size:14px;font-weight:500}
+.note{border-left:2px solid var(--gold);background:#191813;padding:14px 18px;
+ border-radius:0 3px 3px 0;margin:26px 0}
+.note p{margin:0;color:var(--ink2);font-size:14.5px}
+.note p+p{margin-top:9px}
+.note b{color:var(--ink)}
+h2{font-size:20px;margin:44px 0 6px;font-weight:600;letter-spacing:-.01em}
+.lede{color:var(--ink2);font-size:14.5px;margin-bottom:20px;max-width:70ch}
+.ad{border:1px solid var(--rule);border-radius:4px;overflow:hidden;
+ margin-bottom:26px;background:var(--card)}
+.adhead{padding:16px 20px;border-bottom:1px solid var(--rule);
+ display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.flow{font-family:ui-monospace,Menlo,monospace;font-size:11px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.adhead h3{font-size:17px;font-weight:600}
+.adhead p{color:var(--ink2);font-size:14px;flex:1 1 320px}
+.views{display:flex;gap:22px;padding:22px 20px;align-items:flex-start;
+ overflow-x:auto}
+.view{flex:0 0 auto}
+.cap{font-family:ui-monospace,Menlo,monospace;font-size:10.5px;
+ letter-spacing:.09em;text-transform:uppercase;color:var(--ink3);
+ margin-bottom:8px}
+.phone{width:375px;border:1px solid var(--rule);border-radius:10px;
+ overflow:hidden;background:#fff}
+.desk{width:600px;border:1px solid var(--rule);border-radius:3px;
+ overflow:hidden;background:#fff}
+.phone img,.desk img{width:100%;display:block}
+.links{padding:0 20px 18px;font-size:13px;color:var(--ink3)}
+.links a{color:var(--ink2)}
+footer{margin-top:52px;border-top:1px solid var(--rule);padding-top:18px;
+ color:var(--ink3);font-size:12.5px;font-family:ui-monospace,Menlo,monospace}
+@media (max-width:900px){.views{gap:16px}.desk{display:none}}
+</style>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Approved Scale &middot; Fortique Labs &middot; email graphics v2</p>
+    <h1>Rebuilt as composed graphics, designed on the phone.</h1>
+    <p class="sub">You said these were not mobile optimised and still were not
+      hitting the mark. Both of those came from the same decision, so the set is
+      rebuilt rather than adjusted. Every graphic below is shown at 375px, which
+      is the real width on a phone, not scaled down for a slide.</p>
+    <dl class="runbar">
+      <div class="run"><dt>graphics</dt><dd>10</dd></div>
+      <div class="run"><dt>welcome email 1</dt><dd>3 graphics</dd></div>
+      <div class="run"><dt>shape</dt><dd>portrait, 1200px wide</dd></div>
+      <div class="run"><dt>was</dt><dd>1200 x 520 band</dd></div>
+      <div class="run"><dt>spend</dt><dd>none</dd></div>
+    </dl>
+  </header>
+
+  <div class="note">
+    <p><b>What was actually wrong.</b> The old set was a photo band with all the
+      words sitting in the email underneath it. That is the thing you called
+      little cutouts stitched and added, and at 1200 by 520 it lands as a 145
+      pixel strip on a phone, which is the mobile half of the same problem. So
+      the two complaints were one cause.</p>
+    <p><b>What changed.</b> The graphic is now the design: eyebrow, headline,
+      product, and the button all inside one image, the way the examples you
+      sent are built. Portrait, so it has presence on a phone. Nothing is set
+      smaller than about 11 pixels as it lands on a phone screen, which is
+      checked on every build rather than eyeballed.</p>
+    <p><b>Still open, and yours to decide.</b> The welcome flow has no offer in
+      it. Your examples all carry a first order discount and the brief says the
+      welcome flow is usually built around one. I have not invented a
+      percentage. Send a code and a number and it goes into the welcome graphic
+      the same day.</p>
+    <p><b>One trade worth knowing.</b> Copy inside an image cannot be read by a
+      client that blocks images. Every graphic ships with written alt text that
+      carries the same message, and the buttons and legal footer stay as live
+      text in the email underneath.</p>
+  </div>
+
+  <h2>The set</h2>
+  <p class="lede">Ten graphics across eight emails. The first welcome email
+    carries three, which is what the brief asks for.</p>
+  
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Welcome 1</span>
+        <h3>The opening</h3>
+        <p>Wordmark, promise, and the catalog button in one composed graphic rather than a photo strip with the words underneath it.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/01a-welcome-hero.jpg" alt="Fortique Labs. Research-grade compounds, documented before you need it. Every batch carries its own certificate of analysis. Browse the catalog."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/01a-welcome-hero.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/01a-welcome-hero.png">01a-welcome-hero.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Welcome 1</span>
+        <h3>Four things that are always true</h3>
+        <p>The trust block. Certificate per batch, cold storage, tracked shipping, returns. This is the one that answers the questions before they are asked.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/01b-welcome-standards.jpg" alt="How Fortique Labs handles what it ships. One, a certificate of analysis per batch, and every vial traces back to its batch. Two, cold storage with chain of custody. Three, tracked US shipping. Four, thirty days on anything unopened."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/01b-welcome-standards.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/01b-welcome-standards.png">01b-welcome-standards.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Welcome 1</span>
+        <h3>Most requested</h3>
+        <p>Six best sellers, each tile linking to its own product page. Names and prices are read straight off the store, never typed.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/01c-welcome-catalog.jpg" alt="Most requested from the Fortique Labs catalog: BPC-157 10mg $79, NAD+ 500mg $89, GHK-Cu 50mg $49, Semax 10mg $49, TB-500 10mg $69, KLOW Stack 80mg $199. See the full catalog."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/01c-welcome-catalog.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/01c-welcome-catalog.png">01c-welcome-catalog.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Welcome 2</span>
+        <h3>How an order moves</h3>
+        <p>Ordering, acceptance, dispatch, shipping, as a timeline.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/02-welcome-order-moves.jpg" alt="How a Fortique Labs order moves. Ordering, open 24 hours over SSL. Acceptance, subject to availability and research credentials. Dispatch, from cold storage with chain of custody. Shipping, within the United States with tracking."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/02-welcome-order-moves.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/02-welcome-order-moves.png">02-welcome-order-moves.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Welcome 3</span>
+        <h3>What we can and cannot tell you</h3>
+        <p>The two column format, run as information rather than as a competitor.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/03-welcome-what-we-can-say.jpg" alt="What Fortique Labs can and cannot tell you. We can tell you what a compound is and when it was characterized, what your batch certificate says, how it has been stored, what a lot number traces back to, and where your parcel is. We cannot tell you what to do with it, advise on a protocol, interpret results, or comment on human use."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/03-welcome-what-we-can-say.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/03-welcome-what-we-can-say.png">03-welcome-what-we-can-say.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Abandoned cart</span>
+        <h3>Still exactly where you left it</h3>
+        <p>No countdown, no pressure, which is the only version of this that suits a research buyer.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/04-abandoned-cart.jpg" alt="Your Fortique Labs cart is still exactly where you left it. Nothing expires, nothing is reserved, and nothing changes while you decide. No countdown, and verified batches with a certificate of analysis on request. Return to your cart."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/04-abandoned-cart.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/04-abandoned-cart.png">04-abandoned-cart.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Abandoned checkout</span>
+        <h3>You stopped one step short</h3>
+        <p>A progress bar showing exactly where they stopped.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/05-abandoned-checkout.jpg" alt="You stopped one step short at Fortique Labs checkout. Cart and details are done, payment is not. Nothing was charged and nothing was reserved. Finish checking out."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/05-abandoned-checkout.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/05-abandoned-checkout.png">05-abandoned-checkout.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Browse abandonment</span>
+        <h3>Take your time with it</h3>
+        <p>Permission to be slow, with the three reasons to come back.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/06-browse-abandonment.jpg" alt="Take your time with it. Research purchasing is not impulse purchasing. Batch paperwork, a certificate per batch on request. Traceable, every vial traces back to its batch. Storage, cold storage in a secure facility."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/06-browse-abandonment.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/06-browse-abandonment.png">06-browse-abandonment.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Order confirmation</span>
+        <h3>In hand</h3>
+        <p>The one they keep. Dispatch, shipping, timings, returns, all in one.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/07-order-confirmation.jpg" alt="Fortique Labs order received. Dispatch is picked from cold storage with chain of custody. Shipping is within the United States, tracked. Timings are carrier estimates, not guarantees. Unopened returns get 30 days for a full refund. Opened or reconstituted is not returnable. Damaged or defective is replaced at no cost."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/07-order-confirmation.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/07-order-confirmation.png">07-order-confirmation.png</a>, full resolution</div>
+    </div>
+    <div class="ad">
+      <div class="adhead">
+        <span class="flow">Winback</span>
+        <h3>When the next project starts</h3>
+        <p>Three things that have not changed, and an open door.</p>
+      </div>
+      <div class="views">
+        <div class="view">
+          <div class="cap">On a phone, 375px, actual size</div>
+          <div class="phone"><img src="fortique-v2/08-winback.jpg" alt="Fortique Labs is still here when the next project starts. Unchanged: a certificate of analysis per batch and vial to batch traceability. Unchanged: cold storage with chain of custody. Unchanged: tracked US shipping and 30 days on anything unopened. Open the catalog."></div>
+        </div>
+        <div class="view">
+          <div class="cap">Desktop, 600px</div>
+          <div class="desk"><img src="fortique-v2/08-winback.jpg" alt="" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="links"><a href="fortique-v2/08-winback.png">08-winback.png</a>, full resolution</div>
+    </div>
+
+  <footer>Approved Scale &middot; research use only &middot; compound names
+    follow the client's own storefront</footer>
+</div>
