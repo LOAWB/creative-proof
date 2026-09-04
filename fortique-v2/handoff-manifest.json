@@ -1,0 +1,243 @@
+{
+  "brand": "Fortique Labs",
+  "version": 2,
+  "why": "v1 was rejected twice: not mobile optimised, and not hitting the design mark. One cause. v1 was a 1200x520 photo band with all copy in the email HTML. v2 is a composed portrait graphic per email, copy inside the image, per Loom 443372 'the graphic just looks like it is all in one'.",
+  "graphics": 10,
+  "total_kb": 2041,
+  "welcome_email_1_carries": [
+    "01a-welcome-hero",
+    "01b-welcome-standards",
+    "01c-welcome-catalog"
+  ],
+  "open_with_client": "No welcome offer exists. The brief and every example carry a first-order discount. A code and a percent are Jason and Justin, never this pane. Graphic has room for an offer block; send both and it lands same day.",
+  "hard_rules": [
+    "Never tirzepatide, retatrutide or semaglutide on any customer surface. Coded names only, GLP-1/2/3.",
+    "Alt text must survive import. The copy lives in the image now.",
+    "Catalog tiles link per product as a table of linked cells, never an image map."
+  ],
+  "placements": [
+    {
+      "email": "01-Welcome",
+      "position": "top of body, full content width, replacing the old hero band",
+      "remove_from_html": [
+        "the Fortique Labs wordmark block",
+        "the eyebrow above the headline",
+        "the H1 headline",
+        "the standfirst paragraph under the headline",
+        "the primary call to action button (the graphic carries it; keep ONE live-text button below the graphic for image-blocked clients)"
+      ],
+      "graphic": "01a-welcome-hero",
+      "upload_file": "out-v2/email/01a-welcome-hero.jpg",
+      "format": "jpg",
+      "format_reason": "png 792KB vs jpg 230KB; photographic, jpeg is far smaller",
+      "kb": 230,
+      "alt_text": "Fortique Labs. Research-grade compounds, documented before you need it. Every batch carries its own certificate of analysis. Browse the catalog."
+    },
+    {
+      "email": "01-Welcome",
+      "position": "after the opening graphic",
+      "remove_from_html": [
+        "the numbered 'How we handle what we ship' list, all four items",
+        "its section heading"
+      ],
+      "graphic": "01b-welcome-standards",
+      "upload_file": "out-v2/email/01b-welcome-standards.png",
+      "format": "png",
+      "format_reason": "png 179KB vs jpg 241KB; lossless and smaller",
+      "kb": 179,
+      "alt_text": "How Fortique Labs handles what it ships. One, a certificate of analysis per batch, and every vial traces back to its batch. Two, cold storage with chain of custody. Three, tracked US shipping. Four, thirty days on anything unopened."
+    },
+    {
+      "email": "01-Welcome",
+      "position": "below the standards graphic, above the footer",
+      "remove_from_html": [
+        "nothing; this section is new"
+      ],
+      "note": "Needs per-product links. See catalog-slicemap.json and build it as a table of linked cells, NOT an image map: Outlook ignores client-side maps and the whole grid would become one link.",
+      "graphic": "01c-welcome-catalog",
+      "upload_file": "out-v2/email/01c-welcome-catalog.jpg",
+      "format": "jpg",
+      "format_reason": "png 799KB vs jpg 233KB; photographic, jpeg is far smaller",
+      "kb": 233,
+      "alt_text": "Most requested from the Fortique Labs catalog: BPC-157 10mg $79, NAD+ 500mg $89, GHK-Cu 50mg $49, Semax 10mg $49, TB-500 10mg $69, KLOW Stack 80mg $199. See the full catalog.",
+      "slices": [
+        {
+          "product": "BPC-157 10mg",
+          "price": "$79",
+          "url": "https://fortiquelabs.com/product/bpc-157-10mg/",
+          "x": 80,
+          "y": 501,
+          "width": 328,
+          "height": 454
+        },
+        {
+          "product": "NAD+ 500mg",
+          "price": "$89",
+          "url": "https://fortiquelabs.com/product/nad-500mg/",
+          "x": 436,
+          "y": 501,
+          "width": 328,
+          "height": 454
+        },
+        {
+          "product": "GHK-Cu 50mg",
+          "price": "$49",
+          "url": "https://fortiquelabs.com/product/ghk-cu-50mg/",
+          "x": 792,
+          "y": 501,
+          "width": 328,
+          "height": 454
+        },
+        {
+          "product": "Semax 10mg",
+          "price": "$49",
+          "url": "https://fortiquelabs.com/product/semax/",
+          "x": 80,
+          "y": 983,
+          "width": 328,
+          "height": 454
+        },
+        {
+          "product": "TB-500 10mg",
+          "price": "$69",
+          "url": "https://fortiquelabs.com/product/tb-500-10mg/",
+          "x": 436,
+          "y": 983,
+          "width": 328,
+          "height": 454
+        },
+        {
+          "product": "KLOW Stack 80mg",
+          "price": "$199",
+          "url": "https://fortiquelabs.com/product/klow/",
+          "x": 792,
+          "y": 983,
+          "width": 328,
+          "height": 454
+        }
+      ]
+    },
+    {
+      "email": "02-Welcome",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the standfirst",
+        "the Ordering / Acceptance / Dispatch / Shipping definition rows"
+      ],
+      "graphic": "02-welcome-order-moves",
+      "upload_file": "out-v2/email/02-welcome-order-moves.png",
+      "format": "png",
+      "format_reason": "png 194KB vs jpg 221KB; lossless and smaller",
+      "kb": 194,
+      "alt_text": "How a Fortique Labs order moves. Ordering, open 24 hours over SSL. Acceptance, subject to availability and research credentials. Dispatch, from cold storage with chain of custody. Shipping, within the United States with tracking."
+    },
+    {
+      "email": "03-Welcome",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the 'We can tell you' paragraph",
+        "the 'We cannot' paragraph"
+      ],
+      "graphic": "03-welcome-what-we-can-say",
+      "upload_file": "out-v2/email/03-welcome-what-we-can-say.png",
+      "format": "png",
+      "format_reason": "png 200KB vs jpg 229KB; lossless and smaller",
+      "kb": 200,
+      "alt_text": "What Fortique Labs can and cannot tell you. We can tell you what a compound is and when it was characterized, what your batch certificate says, how it has been stored, what a lot number traces back to, and where your parcel is. We cannot tell you what to do with it, advise on a protocol, interpret results, or comment on human use."
+    },
+    {
+      "email": "04-Abandoned-Cart",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the standfirst",
+        "the 'No countdown' and 'Verified batches' cards",
+        "the primary button (keep one live-text button below the graphic)"
+      ],
+      "graphic": "04-abandoned-cart",
+      "upload_file": "out-v2/email/04-abandoned-cart.jpg",
+      "format": "jpg",
+      "format_reason": "png 571KB vs jpg 222KB; photographic, jpeg is far smaller",
+      "kb": 222,
+      "alt_text": "Your Fortique Labs cart is still exactly where you left it. Nothing expires, nothing is reserved, and nothing changes while you decide. No countdown, and verified batches with a certificate of analysis on request. Return to your cart."
+    },
+    {
+      "email": "05-Abandoned-Checkout",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the Cart / Details / Payment / Confirmed progress row",
+        "the explanatory paragraph",
+        "the primary button (keep one live-text button below the graphic)"
+      ],
+      "graphic": "05-abandoned-checkout",
+      "upload_file": "out-v2/email/05-abandoned-checkout.jpg",
+      "format": "jpg",
+      "format_reason": "png 558KB vs jpg 222KB; photographic, jpeg is far smaller",
+      "kb": 222,
+      "alt_text": "You stopped one step short at Fortique Labs checkout. Cart and details are done, payment is not. Nothing was charged and nothing was reserved. Finish checking out."
+    },
+    {
+      "email": "06-Browse-Abandonment",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the standfirst",
+        "the Batch paperwork / Traceable / Storage trio"
+      ],
+      "graphic": "06-browse-abandonment",
+      "upload_file": "out-v2/email/06-browse-abandonment.jpg",
+      "format": "jpg",
+      "format_reason": "png 426KB vs jpg 220KB; photographic, jpeg is far smaller",
+      "kb": 220,
+      "alt_text": "Take your time with it. Research purchasing is not impulse purchasing. Batch paperwork, a certificate per batch on request. Traceable, every vial traces back to its batch. Storage, cold storage in a secure facility."
+    },
+    {
+      "email": "07-Order-Confirmation",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the standfirst",
+        "the Dispatch / Shipping / Timings / Returns definition rows"
+      ],
+      "graphic": "07-order-confirmation",
+      "upload_file": "out-v2/email/07-order-confirmation.png",
+      "format": "png",
+      "format_reason": "png 164KB vs jpg 220KB; lossless and smaller",
+      "kb": 164,
+      "alt_text": "Fortique Labs order received. Dispatch is picked from cold storage with chain of custody. Shipping is within the United States, tracked. Timings are carrier estimates, not guarantees. Unopened returns get 30 days for a full refund. Opened or reconstituted is not returnable. Damaged or defective is replaced at no cost."
+    },
+    {
+      "email": "08-Winback",
+      "position": "top of body, replacing the old hero band",
+      "remove_from_html": [
+        "the wordmark block",
+        "the eyebrow",
+        "the H1 headline",
+        "the standfirst",
+        "the three 'Unchanged' rows",
+        "the primary button (keep one live-text button below the graphic)"
+      ],
+      "graphic": "08-winback",
+      "upload_file": "out-v2/email/08-winback.png",
+      "format": "png",
+      "format_reason": "png 172KB vs jpg 217KB; lossless and smaller",
+      "kb": 172,
+      "alt_text": "Fortique Labs is still here when the next project starts. Unchanged: a certificate of analysis per batch and vial to batch traceability. Unchanged: cold storage with chain of custody. Unchanged: tracked US shipping and 30 days on anything unopened. Open the catalog."
+    }
+  ]
+}
