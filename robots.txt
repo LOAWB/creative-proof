@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /peppro/
 Disallow: /prime/
 Disallow: /revive/
+Disallow: /kairos/
+Disallow: /serenity/
