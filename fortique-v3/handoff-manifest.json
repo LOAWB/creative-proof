@@ -1,7 +1,7 @@
 {
   "brand": "Fortique Labs",
-  "version": 2,
-  "why": "v1 was rejected twice: not mobile optimised, and not hitting the design mark. One cause. v1 was a 1200x520 photo band with all copy in the email HTML. v2 is a composed portrait graphic per email, copy inside the image, per Loom 443372 'the graphic just looks like it is all in one'.",
+  "version": 3,
+  "why": "v3 rebuilds the welcome set to Jason's Loom 445922: the headline owns the frame, the CTA is a pill with an arrow baked into the image, and the featured products become four full-width alternating cards each carrying its own CTA, replacing a six-up thumbnail grid whose names sat on the type floor. Brand, portrait discipline and the positional masthead and legal close are carried over from v2 unchanged.",
   "graphics": 10,
   "total_kb": 2165,
   "welcome_email_1_carries": [
