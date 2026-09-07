@@ -4,3 +4,4 @@ Disallow: /prime/
 Disallow: /revive/
 Disallow: /kairos/
 Disallow: /serenity/
+Disallow: /premier/
