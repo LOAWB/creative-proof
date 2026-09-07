@@ -1,0 +1,38 @@
+[
+  {
+    "product": "BPC-157 10mg",
+    "price": "$79",
+    "url": "https://fortiquelabs.com/product/bpc-157-10mg/",
+    "x": 80,
+    "y": 364,
+    "width": 1040,
+    "height": 456
+  },
+  {
+    "product": "NAD+ 500mg",
+    "price": "$89",
+    "url": "https://fortiquelabs.com/product/nad-500mg/",
+    "x": 80,
+    "y": 850,
+    "width": 1040,
+    "height": 456
+  },
+  {
+    "product": "GHK-Cu 50mg",
+    "price": "$49",
+    "url": "https://fortiquelabs.com/product/ghk-cu-50mg/",
+    "x": 80,
+    "y": 1336,
+    "width": 1040,
+    "height": 456
+  },
+  {
+    "product": "KLOW Stack 80mg",
+    "price": "$199",
+    "url": "https://fortiquelabs.com/product/klow/",
+    "x": 80,
+    "y": 1822,
+    "width": 1040,
+    "height": 456
+  }
+]
