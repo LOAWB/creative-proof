@@ -5,3 +5,4 @@ Disallow: /revive/
 Disallow: /kairos/
 Disallow: /serenity/
 Disallow: /premier/
+Disallow: /elyxion/
