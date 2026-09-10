@@ -1,0 +1,239 @@
+<title>Liberty, one line</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style>
+  /* The art is transparent, so every lockup sits on an explicit ground rather
+     than on the page background, which changes with the reader's theme. */
+  /* One height for every swatch so the grid reads as a system: the five files
+     have different aspect ratios and stretched cards made the row ragged. */
+  .swatch{background:#FFFFFF;border:1px solid var(--rule-soft);border-radius:10px;
+    padding:26px 22px;min-height:150px;display:flex;align-items:center;justify-content:center}
+  .swatch.dark{background:#0F1E46;border-color:#0F1E46}
+  .swatch img{width:100%;max-width:520px;height:auto;display:block}
+  .measure{width:100%;border-collapse:collapse;margin:14px 0 0;font-family:var(--mono);font-size:12.5px}
+  .measure th,.measure td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--rule-soft);color:var(--ink2)}
+  .measure th{color:var(--ink);font-weight:600}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Approved Scale &middot; Liberty &middot; logo</p>
+    <h1>Liberty, on one line</h1>
+    <p class="sub">PEPTIDES dropped, LIBERTY kept, the helix mark rescaled to sit against a
+      single line instead of a stack. The type itself is untouched: the word is placed at its
+      original size and only the mark is scaled, so the letterforms are the client's own,
+      not a resample of them. Five files, all transparent, plus a reversed version because
+      the existing logo does not survive a dark background.</p>
+    <dl class="runbar">
+      <div class="run"><dt>files</dt><dd>5</dd></div>
+      <div class="run"><dt>primary</dt><dd>804 x 144</dd></div>
+      <div class="run"><dt>background</dt><dd>transparent</dd></div>
+      <div class="run"><dt>source</dt><dd>886 x 281</dd></div>
+      <div class="run"><dt>checks</dt><dd>16 of 16</dd></div>
+    </dl>
+  </header>
+
+  <div class="dl">
+    <div class="txt">
+      <h3>Download the set</h3>
+      <p>All five PNGs at full resolution with transparent backgrounds, plus a readme
+        naming what each one is and where the measurements came from.</p>
+    </div>
+    <a class="btn" href="liberty-logo.zip" download>Download zip, 0.3 MB</a>
+  </div>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>The files</h2>
+      <p>Shown on white, and the reversed one on navy, because these are transparent files
+        and the ground is what decides whether they hold up.</p>
+    </div>
+    <div class="grid">
+    <div class="ad">
+      <div class="swatch"><img src="liberty01/liberty-lockup-primary.png" alt="Primary"></div>
+      <div class="cap">
+        <p class="key">804 x 144</p>
+        <h3>Primary</h3>
+        <p class="arg">Mark at 1.25x the cap height. The one to use.</p>
+        <p class="skin"><a href="liberty01/liberty-lockup-primary.png" style="color:var(--ink3)">download png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="swatch dark"><img src="liberty01/liberty-lockup-primary-reverse.png" alt="Primary, reversed"></div>
+      <div class="cap">
+        <p class="key">804 x 144</p>
+        <h3>Primary, reversed</h3>
+        <p class="arg">Same lockup, the mark's navy remapped to white, for dark backgrounds.</p>
+        <p class="skin"><a href="liberty01/liberty-lockup-primary-reverse.png" style="color:var(--ink3)">download png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="swatch"><img src="liberty01/liberty-lockup-alt-large-mark.png" alt="Alternate, larger mark"></div>
+      <div class="cap">
+        <p class="key">821 x 172</p>
+        <h3>Alternate, larger mark</h3>
+        <p class="arg">Mark at 1.5x. Closest to the original's tall-anchor feel.</p>
+        <p class="skin"><a href="liberty01/liberty-lockup-alt-large-mark.png" style="color:var(--ink3)">download png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="swatch"><img src="liberty01/liberty-lockup-alt-small-mark.png" alt="Alternate, smaller mark"></div>
+      <div class="cap">
+        <p class="key">787 x 115</p>
+        <h3>Alternate, smaller mark</h3>
+        <p class="arg">Mark at 1.0x, exactly the cap height. Included for completeness.</p>
+        <p class="skin"><a href="liberty01/liberty-lockup-alt-small-mark.png" style="color:var(--ink3)">download png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="swatch"><img src="liberty01/liberty-wordmark-only.png" alt="Wordmark only"></div>
+      <div class="cap">
+        <p class="key">696 x 115</p>
+        <h3>Wordmark only</h3>
+        <p class="arg">No mark at all. The option to test if the helix is the compliance problem.</p>
+        <p class="skin"><a href="liberty01/liberty-wordmark-only.png" style="color:var(--ink3)">download png</a></p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="ratio">
+    <h3>What was measured</h3>
+    <p class="note">Taken off the transparent source, not from the filename, which claims a
+      size the file does not have.</p>
+    <table class="measure">
+      <tr><th>element</th><th>x</th><th>y</th><th>size</th></tr>
+      <tr><td>mark</td><td>6..154</td><td>14..264</td><td>149 x 251</td></tr>
+      <tr><td>LIBERTY</td><td>178..873</td><td>15..129</td><td>696 x 115</td></tr>
+      <tr><td>PEPTIDES</td><td>178..868</td><td>157..266</td><td>691 x 110</td></tr>
+    </table>
+    <p class="note" style="margin-top:14px">The two lines are set to the same measure, so
+      removing PEPTIDES costs the lockup no width and the wordmark needed no reworking. The
+      real work was the mark, which stood 251 tall against a 115 tall word and had to come
+      down and re-centre. The gap stayed at the original 23px: it belongs to the type, and
+      the type did not change size.</p>
+  </section>
+
+  <section class="ratio">
+    <h3>Two things worth a decision</h3>
+    <p class="note"><strong>The mark still reads as biotech.</strong> If the goal is getting
+      past ad review, dropping the word may not be enough on its own, because the helix is
+      the part a classifier looks at. The mark has deliberately not been redesigned here.
+      The wordmark-only file is the version to test if you want to see whether the mark is
+      what is holding the ads up.</p>
+    <p class="note" style="margin-top:12px"><strong>The current logo has no dark version.</strong>
+      On a dark ground the navy dots and bars sink into the background, and the pale rings
+      are transparent holes rather than white fill, so they fill with the background too.
+      That is the existing artwork, not a side effect of this edit. The reversed file fixes
+      it for the new lockup.</p>
+    <p class="note" style="margin-top:12px"><strong>These are pixel files at their native
+      size.</strong> Fine for web, social and ads. Anything going to print or large format
+      needs the type rebuilt as vector rather than these upscaled.</p>
+  </section>
+</div>
