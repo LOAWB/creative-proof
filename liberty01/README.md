@@ -1,70 +1,60 @@
-# Liberty: one-line lockup (PEPTIDES dropped)
+# Liberty logo, one-line version
 
-Jason, lane 2431 rowid 450848: "make a compliant version of this clients logo
-remove peptides and just keep the word liberty". Source: libertypeptides.com.
+The wordmark with PEPTIDES removed and LIBERTY kept, and the helix mark
+rescaled to sit against a single line instead of a stack.
 
-## The brief's premise was wrong, and it made the job smaller
+The lettering is your own artwork, placed at its original size. Nothing about
+the word was redrawn, restretched or re-typeset. Only the mark was resized, and
+only downward, so the letterforms in these files are pixel for pixel the ones
+from your existing logo.
 
-The routed task said *"PEPTIDES is WIDER than LIBERTY ... the whole thing needs
-re-proportioning"*. Measured off the transparent source, that is not the case:
+## The files
 
-| element  | x range  | y range  | size    |
-|----------|----------|----------|---------|
-| mark     | 6..154   | 14..264  | 149x251 |
-| LIBERTY  | 178..873 | 15..129  | 696x115 |
-| PEPTIDES | 178..868 | 157..266 | 691x110 |
+All five are PNGs with transparent backgrounds.
 
-LIBERTY is **696** wide, PEPTIDES is **691**. LIBERTY is the wider of the two by
-5px. The two lines are set to the same measure, so dropping PEPTIDES costs the
-lockup no width and **the wordmark needed no re-proportioning at all**.
+| file | size | what it is |
+|---|---|---|
+| `liberty-lockup-primary.png` | 804 x 144 | **Use this one.** The mark sits slightly taller than the word, which is what keeps it readable next to a single line. |
+| `liberty-lockup-primary-reverse.png` | 804 x 144 | The same lockup for dark backgrounds. The mark's navy is remapped to white so it does not disappear. |
+| `liberty-lockup-alt-large-mark.png` | 821 x 172 | The mark given more presence. Closest in feel to your current stacked logo. |
+| `liberty-lockup-alt-small-mark.png` | 787 x 115 | The mark exactly matched to the height of the word. |
+| `liberty-wordmark-only.png` | 696 x 115 | The word on its own, no mark. |
 
-What was real: the mark is 251 tall against a 115-tall LIBERTY, so beside one
-line it is 2.2x too tall and had to be rescaled and re-centred.
+## Two things worth deciding
 
-Also confirmed: the source is **886x281**, not the 2048x651 its filename claims.
+**The mark still reads as biotech.** If the goal here is getting past ad
+review, taking the word out may not be enough on its own, because the helix is
+the part an automated reviewer looks at. The mark has deliberately been left
+exactly as it is, because redesigning it is a bigger decision than this job.
+The wordmark-only file is there if you want to run a test without it.
 
-## What was built
+**Your current logo has no dark version.** On a dark background the navy dots
+and bars sink into it, and the pale rings are transparent holes rather than
+white fill, so they fill with the background too. That is true of your existing
+artwork, not something introduced here. The reversed file fixes it for this
+lockup. Note that the reversed version keeps the crimson lettering rather than
+lightening it, so the word holds its brand colour but sits at lower contrast on
+a dark ground than it does on white. If you would rather have maximum
+legibility than exact brand colour on dark placements, that version is a quick
+change.
 
-The type is never resampled. LIBERTY is placed at its native 696x115 crop, and
-only the mark is scaled, always downward. The gap is held at the original 23px
-because the gap belongs to the type, and the type has not changed size. (Scaling
-the gap with the mark closed it to 11px and the word crowded the helix; that
-was rendered, looked at, and rejected.)
+## Working with these files
 
-| file | what it is |
-|---|---|
-| `liberty-lockup-primary.png` | 804x144. Mark at 1.25x the cap height. **The recommended one.** |
-| `liberty-lockup-primary-reverse.png` | Same, mark's navy remapped to white, for dark backgrounds. |
-| `liberty-lockup-alt-small-mark.png` | 787x115. Mark at 1.0x, the arithmetically faithful ratio. |
-| `liberty-lockup-alt-large-mark.png` | 821x172. Mark at 1.5x, closest to the original's tall-anchor feel. |
-| `liberty-wordmark-only.png` | 696x115. The wordmark alone, no mark. |
+Fine for web, social and advertising at the sizes given.
 
-The mark is a tall narrow helix (w/h 0.59). Scaled to exactly the cap height it
-collapses to 68px wide and reads as a sliver, which is why the faithful 1.0x is
-the alternate and 1.25x is the recommendation. All five were rendered and
-compared on white and on navy before choosing.
+Two limits worth knowing. These are pixel files at their natural size, so
+anything going to print or large format wants the lettering rebuilt as vector
+rather than these scaled up. And the source artwork they came from had been
+saved in a lossy format at some point, so the flat colours carry slight
+compression noise: the crimson samples a few very close values rather than one
+exact figure. That is invisible in use, but it means these files are not the
+place to read your official brand hex from. If you have the original vector
+logo, sending it over would let all of this be rebuilt clean and to any size.
 
-## Two things Jason should decide
+## What was checked
 
-1. **"Compliant" may need more than the word.** If the goal is ad-platform drug
-   rejections, the DNA/helix mark still reads as pharma to a classifier. A
-   neutralised mark is available but was deliberately **not** designed here,
-   because nobody asked for a redesign. `liberty-wordmark-only.png` is the
-   no-mark option if he wants to test without it.
-2. **The original logo has no dark-background version.** On navy, the mark's
-   navy dots and bars vanish and the ring centres are transparent holes, not
-   white fill, so they fill with the background too. This is true of the
-   client's existing artwork, not something introduced here.
-   `liberty-lockup-primary-reverse.png` fixes it for the new lockup.
-
-## Limits
-
-Native-resolution raster. Print or large format needs the type rebuilt as
-vector; this file must not be upscaled.
-
-## Verify
-
-`./check.sh` reads every deliverable with Vision at native size and at 2x and
-asserts LIBERTY present, PEPTIDES absent, real alpha. The untouched source is
-run as a control and must still read PEPTIDES, otherwise the absence checks
-would be blind. Last run: **16 passed, 0 failed**.
+Every file was read back with text recognition at two resolutions to confirm
+the artwork carries LIBERTY and that PEPTIDES appears nowhere in it, and each
+file was confirmed to have a real transparent background. The original logo was
+run through the same check as a control, and it does still read PEPTIDES, which
+is what proves the check works rather than passing everything blindly.
