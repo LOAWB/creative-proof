@@ -53,8 +53,5 @@ logo, sending it over would let all of this be rebuilt clean and to any size.
 
 ## What was checked
 
-Every file was read back with text recognition at two resolutions to confirm
-the artwork carries LIBERTY and that PEPTIDES appears nowhere in it, and each
-file was confirmed to have a real transparent background. The original logo was
-run through the same check as a control, and it does still read PEPTIDES, which
-is what proves the check works rather than passing everything blindly.
+Every file was checked to confirm the artwork carries LIBERTY, that PEPTIDES
+appears nowhere in it, and that the background is genuinely transparent.

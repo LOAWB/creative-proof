@@ -109,16 +109,13 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <style>
-  /* The art is transparent, so every lockup sits on an explicit ground rather
-     than on the page background, which follows the reader's theme. */
+  /* Transparent art, so each lockup sits on an explicit ground. */
   .swatch{--scale:1;background:#FFFFFF;border:1px solid var(--rule-soft);border-radius:10px;
     padding:26px 22px;min-height:150px;display:flex;align-items:center;justify-content:center}
   .swatch.dark{background:#0F1E46;border-color:#0F1E46}
-  /* ONE shared scale across all five tiles. Each width is that file's natural
-     width as a share of the widest, so the WORD renders identically everywhere
-     and only the mark changes. Sizing each image to 100% of its own tile made
-     the word look larger in the small-mark and wordmark-only tiles, which is
-     the opposite of the comparison this sheet exists to make. */
+  /* One shared scale across all five tiles: each width is that file's natural
+     width as a share of the widest, so the word renders identically in every
+     tile and only the mark changes. */
   .swatch img{width:calc(var(--scale) * 100%);max-width:none;height:auto;display:block}
   .key .dim{text-transform:none}
   .measure{width:100%;border-collapse:collapse;margin:14px 0 0;font-family:var(--mono);font-size:12.5px}
@@ -225,8 +222,8 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-
       the same width, with LIBERTY the wider of the two, so removing PEPTIDES costs the
       lockup no width and the word needed no reworking at all. The real work was the mark,
       which stood 251 tall against a 115 tall word and had to come down and re-centre. The
-      gap between mark and word stayed at the original 23 pixels, because that gap belongs
-      to the lettering and the lettering has not changed size.</p>
+      gap between mark and word was held at the original 23 pixels, which keeps the word
+      sitting where it always has relative to the mark.</p>
   </section>
 
   <section class="ratio">
@@ -239,8 +236,9 @@ footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-
     <p class="note" style="margin-top:12px"><strong>The current logo has no dark version.</strong>
       On a dark ground the navy dots and bars sink into the background, and the pale rings
       are transparent holes rather than white fill, so they fill with the background too.
-      That is the existing artwork rather than anything introduced here. The reversed file
-      fixes it. Note it keeps the crimson lettering rather than lightening it, so the word
+      That is the existing artwork rather than anything introduced here. In the reversed
+      file the mark's strokes are white, so the rings read as white outlines against the
+      dark ground instead of disappearing into it. Note it keeps the crimson lettering rather than lightening it, so the word
       holds its brand colour but sits at lower contrast on dark than it does on white. If
       legibility matters more than exact colour on dark placements, that is a quick change.</p>
     <p class="note" style="margin-top:12px"><strong>Two limits.</strong> These are pixel
