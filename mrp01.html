@@ -1,0 +1,173 @@
+<title>MRP Static Set</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<body>
+<main class="wrap">
+<header>
+  <p class="eyebrow">MRP &middot; My Research Peptides &middot; mrp.bio</p>
+  <h1>Fifteen ads, fifteen layouts</h1>
+  <p class="lede">Built to the concept in your Drive folder: the vial standing on the lab counter,
+  the four test icons, the COA button. The product sits on a surface now, with its own reflection
+  and shadow, instead of being cut out and dropped on a background. Colour is blue throughout and
+  the layout changes from ad to ad rather than the picture being swapped inside one template.</p>
+</header>
+
+<div class="dl">
+  <div class="txt"><h3>Feed, 4&#215;5 &middot; 1080&#215;1350</h3>
+  <p>Fifteen JPEGs, full resolution.</p></div>
+  <a class="btn" href="mrp-v8/MRP-Statics-v8-Feed-4x5.zip" download>Download 4&#215;5</a>
+</div>
+<div class="dl">
+  <div class="txt"><h3>Story, 9&#215;16 &middot; 1080&#215;1920</h3>
+  <p>The same fifteen, recomposed for the taller placement.</p></div>
+  <a class="btn" href="mrp-v8/MRP-Statics-v8-Story-9x16.zip" download>Download 9&#215;16</a>
+</div>
+
+<div class="ratio"><h3>Feed &middot; 4&#215;5</h3><p class="note">1080&#215;1350. Click any frame for full resolution.</p><div class="rgrid">
+<figure><img src="mrp-v8/MRP-v8-01_4x5.jpg" alt="MRP static 01" loading="lazy"><figcaption>01 &middot; Every lot, on file</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-02_4x5.jpg" alt="MRP static 02" loading="lazy"><figcaption>02 &middot; Research. Discover. Elevate.</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-03_4x5.jpg" alt="MRP static 03" loading="lazy"><figcaption>03 &middot; Proven quality</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-04_4x5.jpg" alt="MRP static 04" loading="lazy"><figcaption>04 &middot; Purity you can read</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-05_4x5.jpg" alt="MRP static 05" loading="lazy"><figcaption>05 &middot; Product only, no copy</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-06_4x5.jpg" alt="MRP static 06" loading="lazy"><figcaption>06 &middot; The paperwork comes with it</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-07_4x5.jpg" alt="MRP static 07" loading="lazy"><figcaption>07 &middot; Know what is in the vial</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-08_4x5.jpg" alt="MRP static 08" loading="lazy"><figcaption>08 &middot; Research without compromise</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-09_4x5.jpg" alt="MRP static 09" loading="lazy"><figcaption>09 &middot; Lab certified</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-10_4x5.jpg" alt="MRP static 10" loading="lazy"><figcaption>10 &middot; Built for the bench</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-11_4x5.jpg" alt="MRP static 11" loading="lazy"><figcaption>11 &middot; Standards first</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-12_4x5.jpg" alt="MRP static 12" loading="lazy"><figcaption>12 &middot; Consistent, lot to lot</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-13_4x5.jpg" alt="MRP static 13" loading="lazy"><figcaption>13 &middot; Analysis included</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-14_4x5.jpg" alt="MRP static 14" loading="lazy"><figcaption>14 &middot; Elevate the standard</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-15_4x5.jpg" alt="MRP static 15" loading="lazy"><figcaption>15 &middot; Four tests, one vial</figcaption></figure>
+</div></div>
+<div class="ratio"><h3>Story &middot; 9&#215;16</h3><p class="note">1080&#215;1920. Same fifteen concepts, recomposed.</p><div class="rgrid">
+<figure><img src="mrp-v8/MRP-v8-01_9x16.jpg" alt="MRP static 01" loading="lazy"><figcaption>01 &middot; Every lot, on file</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-02_9x16.jpg" alt="MRP static 02" loading="lazy"><figcaption>02 &middot; Research. Discover. Elevate.</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-03_9x16.jpg" alt="MRP static 03" loading="lazy"><figcaption>03 &middot; Proven quality</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-04_9x16.jpg" alt="MRP static 04" loading="lazy"><figcaption>04 &middot; Purity you can read</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-05_9x16.jpg" alt="MRP static 05" loading="lazy"><figcaption>05 &middot; Product only, no copy</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-06_9x16.jpg" alt="MRP static 06" loading="lazy"><figcaption>06 &middot; The paperwork comes with it</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-07_9x16.jpg" alt="MRP static 07" loading="lazy"><figcaption>07 &middot; Know what is in the vial</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-08_9x16.jpg" alt="MRP static 08" loading="lazy"><figcaption>08 &middot; Research without compromise</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-09_9x16.jpg" alt="MRP static 09" loading="lazy"><figcaption>09 &middot; Lab certified</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-10_9x16.jpg" alt="MRP static 10" loading="lazy"><figcaption>10 &middot; Built for the bench</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-11_9x16.jpg" alt="MRP static 11" loading="lazy"><figcaption>11 &middot; Standards first</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-12_9x16.jpg" alt="MRP static 12" loading="lazy"><figcaption>12 &middot; Consistent, lot to lot</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-13_9x16.jpg" alt="MRP static 13" loading="lazy"><figcaption>13 &middot; Analysis included</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-14_9x16.jpg" alt="MRP static 14" loading="lazy"><figcaption>14 &middot; Elevate the standard</figcaption></figure>
+<figure><img src="mrp-v8/MRP-v8-15_9x16.jpg" alt="MRP static 15" loading="lazy"><figcaption>15 &middot; Four tests, one vial</figcaption></figure>
+</div></div>
+
+<footer>
+  <p>Research use only. Not for human consumption. 21+. Every claim on these frames traces to MRP's
+  own site copy or their own ad concept; nothing is invented. Compound names appear only where they
+  sit on the product label.</p>
+</footer>
+</main>
+</body>
