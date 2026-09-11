@@ -1,0 +1,300 @@
+<title>MRP, fifteen statics</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">MRP, My Research Peptides &middot; static set 01</p>
+    <h1>Fifteen arguments, fifteen compositions</h1>
+    <p class="sub">Fifteen different things to say about the supply, each one built as its own
+      composition, and each one photographed in its own world with the vial inside the scene,
+      not a cutout on a background. The blue you asked for lives in those worlds: blue glass,
+      blue window light, water, ice, navy lacquer. Every line of wording is set in code over
+      the photograph, so nothing on the artwork is invented by a model. Square, composed for the feed. Every label
+      carries the MRP mark only. There is no button on the artwork.</p>
+    <dl class="runbar">
+      <div class="run"><dt>ads</dt><dd>15</dd></div>
+      <div class="run"><dt>compositions</dt><dd>15</dd></div>
+      <div class="run"><dt>sizes</dt><dd>1:1</dd></div>
+      <div class="run"><dt>files</dt><dd>15</dd></div>
+      <div class="run"><dt>product images</dt><dd>1</dd></div>
+    </dl>
+  </header>
+
+  <div class="dl">
+    <div class="txt">
+      <h3>Download the whole set</h3>
+      <p>All fifteen ads at 1:1, 15 files at full resolution, plus a short
+        readme naming what each one argues. One zip, made to drop straight into a Drive
+        folder and share on.</p>
+    </div>
+    <a class="btn" href="mrp04/mrp04-statics.zip" download>Download zip, 19.0 MB</a>
+  </div>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>The set</h2>
+      <p>One square frame for each ad. Full resolution PNGs are linked beside every one, and each
+        card names the argument it makes and the archetype folder its composition
+        came from.</p>
+    </div>
+    <div class="grid">
+    <div class="ad">
+      <div class="shot"><img src="mrp04/01-crossed-1x1.jpg" alt="Read the certificate, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">01-crossed</p>
+        <h3>Read the certificate.</h3>
+        <p class="arg">PROOF. A certificate beats a promise.</p>
+        <p class="dev">Composition from crossed.</p>
+        <p class="skin"><a href="mrp04/01-crossed-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/02-news-1x1.jpg" alt="Flat rate, every order, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">02-news</p>
+        <h3>Flat rate, every order.</h3>
+        <p class="arg">FULFILMENT. Flat, predictable, free past two hundred.</p>
+        <p class="dev">Composition from news.</p>
+        <p class="skin"><a href="mrp04/02-news-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/03-question-based-1x1.jpg" alt="Who tested it?, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">03-question-based</p>
+        <h3>Who tested it?</h3>
+        <p class="arg">WHO TESTED IT. Third party, in the US.</p>
+        <p class="dev">Composition from question-based.</p>
+        <p class="skin"><a href="mrp04/03-question-based-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/04-features-callout-1x1.jpg" alt="Four facts on every vial, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">04-features-callout</p>
+        <h3>Four facts on every vial.</h3>
+        <p class="arg">FOUR FACTS. The whole standard in one frame.</p>
+        <p class="dev">Composition from features-callout.</p>
+        <p class="skin"><a href="mrp04/04-features-callout-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/05-us-vs-them-1x1.jpg" alt="Documents beat adjectives, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">05-us-vs-them</p>
+        <h3>Documents beat adjectives.</h3>
+        <p class="arg">DOCUMENTS BEAT ADJECTIVES.</p>
+        <p class="dev">Composition from us-vs-them.</p>
+        <p class="skin"><a href="mrp04/05-us-vs-them-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/06-features-list-1x1.jpg" alt="Why researchers choose MRP, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">06-features-list</p>
+        <h3>Why researchers choose MRP.</h3>
+        <p class="arg">THE DIFFERENCE, LISTED.</p>
+        <p class="dev">Composition from features-list.</p>
+        <p class="skin"><a href="mrp04/06-features-list-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/07-negative-command-1x1.jpg" alt="Do not order without the paperwork, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">07-negative-command</p>
+        <h3>Do not order without the paperwork.</h3>
+        <p class="arg">NO PAPERWORK, NO ORDER.</p>
+        <p class="dev">Composition from negative-command.</p>
+        <p class="skin"><a href="mrp04/07-negative-command-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/08-quiz-1x1.jpg" alt="Batch specific. Public, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">08-quiz</p>
+        <h3>Batch specific. Public.</h3>
+        <p class="arg">WHAT A LOT NUMBER GETS YOU.</p>
+        <p class="dev">Composition from quiz.</p>
+        <p class="skin"><a href="mrp04/08-quiz-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/09-app-1x1.jpg" alt="The COA library, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">09-app</p>
+        <h3>The COA library.</h3>
+        <p class="arg">THE LIBRARY. Open a lot, read the report.</p>
+        <p class="dev">Composition from app.</p>
+        <p class="skin"><a href="mrp04/09-app-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/10-question-angled-1x1.jpg" alt="Value you can verify, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">10-question-angled</p>
+        <h3>Value you can verify.</h3>
+        <p class="arg">VALUE. What the money actually buys.</p>
+        <p class="dev">Composition from question-angled.</p>
+        <p class="skin"><a href="mrp04/10-question-angled-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/11-hero-word-1x1.jpg" alt="TESTED, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">11-hero-word</p>
+        <h3>TESTED.</h3>
+        <p class="arg">TESTED. One word, three proofs.</p>
+        <p class="dev">Composition from hero-word.</p>
+        <p class="skin"><a href="mrp04/11-hero-word-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/12-stat-card-1x1.jpg" alt="Three numbers you can hold us to, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">12-stat-card</p>
+        <h3>Three numbers you can hold us to.</h3>
+        <p class="arg">THE NUMBERS. Three you can hold us to.</p>
+        <p class="dev">Composition from stat-card.</p>
+        <p class="skin"><a href="mrp04/12-stat-card-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/13-lot-stamp-1x1.jpg" alt="Every lot has a number. Every number has a certificate, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">13-lot-stamp</p>
+        <h3>Every lot has a number. Every number has a certificate.</h3>
+        <p class="arg">THE LOT NUMBER. Every one has a certificate.</p>
+        <p class="dev">Composition from lot-stamp.</p>
+        <p class="skin"><a href="mrp04/13-lot-stamp-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/14-checklist-1x1.jpg" alt="Ask these before you order anywhere, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">14-checklist</p>
+        <h3>Ask these before you order anywhere.</h3>
+        <p class="arg">THE CHECKLIST. Three questions before any order.</p>
+        <p class="dev">Composition from checklist.</p>
+        <p class="skin"><a href="mrp04/14-checklist-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="mrp04/15-editorial-1x1.jpg" alt="Research without compromise, square" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">15-editorial</p>
+        <h3>Research without compromise.</h3>
+        <p class="arg">THE LINE. The brand's own words.</p>
+        <p class="dev">Composition from editorial.</p>
+        <p class="skin"><a href="mrp04/15-editorial-1x1.png" style="color:var(--ink3)">1x1 png</a></p>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>
