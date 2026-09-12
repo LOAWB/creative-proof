@@ -1,0 +1,267 @@
+<title>ASCND Research, eight statics</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">ASCND Research &middot; static set 01</p>
+    <h1>Eight angles, eight compositions</h1>
+    <p class="sub">Built to the Concept client creative guide you sent, one ad per sanctioned
+      angle, so the set is eight different arguments rather than one argument in eight
+      treatments. Every ad sells the proof rather than the product: a verification headline,
+      proof chips, a verify call to action, and the required disclaimer band on every single
+      file. Square and nine by sixteen, each composed for its own frame rather than cropped.
+      Your own product photography is used throughout, with the label reduced to the ascnd
+      wordmark. No compound name, no dose and no percentage appears anywhere on the artwork.</p>
+    <dl class="runbar">
+      <div class="run"><dt>ads</dt><dd>8</dd></div>
+      <div class="run"><dt>angles</dt><dd>8</dd></div>
+      <div class="run"><dt>compositions</dt><dd>8</dd></div>
+      <div class="run"><dt>sizes</dt><dd>1x1 and 9x16</dd></div>
+      <div class="run"><dt>files</dt><dd>16</dd></div>
+    </dl>
+  </header>
+
+  <div class="dl">
+    <div class="txt">
+      <h3>Download the whole set</h3>
+      <p>All eight ads at 1x1 and 9x16, 16 files at full resolution, plus a readme naming
+        the angle each one runs. One zip, made to drop straight into a Drive folder.</p>
+    </div>
+    <a class="btn" href="ascnd-statics-01.zip" download>Download zip, 7.5 MB</a>
+  </div>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>The set</h2>
+      <p>Square on top, nine by sixteen under it, for each ad. Full resolution PNGs are
+        linked beside every one, and each card names the angle it runs and the line on your
+        live site the claim comes from.</p>
+    </div>
+    <div class="grid">
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/01-coa-first-1x1.jpg" alt="Before you order, read the report, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/01-coa-first-9x16.jpg" alt="Before you order, read the report, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">01-coa-first</p>
+        <h3>Before you order, read the report.</h3>
+        <p class="arg">Check the COA First. PROOF FIRST. The document is the first thing to reach for, before the product.</p>
+        <p class="dev">Source: /lab-reports: '22 documents are published across 20 of the 20 products in the catalog'; /faq: 'Every product we list, shown with the lot documentation available for it.'</p>
+        <p class="skin"><a href="ascnd01/01-coa-first-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/01-coa-first-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/02-checklist-1x1.jpg" alt="Three things to check before you order anywhere, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/02-checklist-9x16.jpg" alt="Three things to check before you order anywhere, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">02-checklist</p>
+        <h3>Three things to check before you order anywhere.</h3>
+        <p class="arg">The Buyer's Checklist. A CHECKLIST THE BUYER OWNS. Three questions to ask of any supplier's paperwork.</p>
+        <p class="dev">Source: /lab-reports 'What travels with every document': Who commissioned it, Which lot it covers, What it establishes.</p>
+        <p class="skin"><a href="ascnd01/02-checklist-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/02-checklist-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/03-crossed-1x1.jpg" alt="A narrower claim that is true, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/03-crossed-9x16.jpg" alt="A narrower claim that is true, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">03-crossed</p>
+        <h3>A narrower claim that is true.</h3>
+        <p class="arg">Proof Over Hype. THE CALM SUPPLIER. Adjectives are what a seller chooses; a document is not.</p>
+        <p class="dev">Source: /faq verbatim: 'We would rather show you a narrower claim that is true than a broader one that is not.'; /lab-reports: 'Documents are published as received and are not restyled.'</p>
+        <p class="skin"><a href="ascnd01/03-crossed-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/03-crossed-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/04-lot-stamp-1x1.jpg" alt="A certificate belongs to a lot, not to a product, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/04-lot-stamp-9x16.jpg" alt="A certificate belongs to a lot, not to a product, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">04-lot-stamp</p>
+        <h3>A certificate belongs to a lot, not to a product.</h3>
+        <p class="arg">The Lot Number Test. THE BINDING UNIT. A certificate is about a batch, not about a brand.</p>
+        <p class="dev">Source: /faq: 'A certificate binds to a lot, never to a product in general.'; /lab-reports: 'Lot, batch, and reference numbers are shown as printed.'</p>
+        <p class="skin"><a href="ascnd01/04-lot-stamp-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/04-lot-stamp-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/05-source-split-1x1.jpg" alt="No mystery about who ran the test, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/05-source-split-9x16.jpg" alt="No mystery about who ran the test, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">05-source-split</p>
+        <h3>No mystery about who ran the test.</h3>
+        <p class="arg">No Mystery Sourcing. PROVENANCE OF THE PAPERWORK. Who ran the test, and who paid for it, are different questions and both are answered.</p>
+        <p class="dev">Source: /lab-reports verbatim: 'Each report is labelled either supplier-supplied or commissioned by ASCND Research. A supplier's report is never presented as testing commissioned by this store.'</p>
+        <p class="skin"><a href="ascnd01/05-source-split-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/05-source-split-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/06-lab-spec-1x1.jpg" alt="Lab tested is not specific enough, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/06-lab-spec-9x16.jpg" alt="Lab tested is not specific enough, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">06-lab-spec</p>
+        <h3>Lab tested is not specific enough.</h3>
+        <p class="arg">Lab Tested Isn't Specific Enough. NAME THE TESTING. Two words on a homepage are not a method, a laboratory or a reference.</p>
+        <p class="dev">Source: /lab-reports document rows name these laboratories, and a scope line reads 'Identity by LC-MS, purity by HPLC-UV'. The word purity is deliberately not printed on the artwork.</p>
+        <p class="skin"><a href="ascnd01/06-lab-spec-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/06-lab-spec-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/07-fulfilment-1x1.jpg" alt="Documented, tracked, shipped from the United States, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/07-fulfilment-9x16.jpg" alt="Documented, tracked, shipped from the United States, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">07-fulfilment</p>
+        <h3>Documented, tracked, shipped from the United States.</h3>
+        <p class="arg">Fast, Documented, Domestic. FULFILMENT AS TRUST. Predictable handling, tracked, with the paperwork attached.</p>
+        <p class="dev">Source: home: 'Orders ship from within the United States with tracking provided after fulfillment.'; /faq: 'Orders are processed in approximately 2 to 5 business days', 'Processing time is measured from payment confirmation'.</p>
+        <p class="skin"><a href="ascnd01/07-fulfilment-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/07-fulfilment-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="ascnd01/08-custody-path-1x1.jpg" alt="Once it leaves our control, we cannot attest to how it was stored, square" loading="lazy"></div>
+      <div class="shot"><img src="ascnd01/08-custody-path-9x16.jpg" alt="Once it leaves our control, we cannot attest to how it was stored, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">08-custody-path</p>
+        <h3>Once it leaves our control, we cannot attest to how it was stored.</h3>
+        <p class="arg">Chain of Custody. THE WHOLE PATH. Custody is why the paperwork travels with the lot and why a shipped vial cannot come back.</p>
+        <p class="dev">Source: /faq returns verbatim: 'Shipped products are not returnable, for reasons of chain of custody: once material has left our control we cannot attest to how it was stored.'</p>
+        <p class="skin"><a href="ascnd01/08-custody-path-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="ascnd01/08-custody-path-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>Three things worth a look before these run</h2>
+      <p>Each one is a place where the guide's example and your live site disagreed, and the
+        site won. Say the word on any of them and it is a quick change.</p>
+    </div>
+    <div class="notes">
+      <p><b>No "third-party tested" badge anywhere.</b> The guide's example ads carry one. Your
+        COA library says all 22 published reports were supplier supplied and none were
+        commissioned by ASCND Research, and the site is careful never to present a supplier's
+        report as your own testing. The badge would claim exactly what you avoid claiming, so
+        the chips talk about documentation instead.</p>
+      <p><b>The sourcing angle is about the paperwork, not the factory.</b> The guide's version
+        sells documented U.S.-made production. The site says orders ship from within the United
+        States, which is fulfilment rather than manufacture, so that ad asks who ran the test
+        and who commissioned it. If domestic production is true and you want it said, it needs
+        to come from you in writing.</p>
+      <p><b>No prices and no thresholds on the artwork.</b> Flat-rate shipping and free over a
+        threshold are both real and both on the site, but the guide bans offer language and any
+        percentage anywhere, so fulfilment is sold as predictability and tracking instead.</p>
+    </div>
+  </section>
+</div>
+
+<style>
+.notes p { margin:0 0 14px; color:var(--ink2); font-size:14.5px; line-height:1.6; }
+.notes b { color:var(--ink); }
+.ad .dev { font-size:12px; color:var(--ink3); line-height:1.45; margin-top:6px; }
+</style>
