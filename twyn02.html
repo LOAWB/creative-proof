@@ -1,0 +1,307 @@
+<title>Twyn Wellness, ten statics</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Approved Scale &middot; Twyn Wellness &middot; batch 02</p>
+    <h1>Ten arguments, ten compositions</h1>
+    <p class="sub">Ten different things to say about the supply, each one built as its own
+      composition rather than as another headline dropped into the same frame. The layouts
+      are taken from the archetype folders in your own Drive, so the structures are ones you
+      already run: the struck line, the notice block, the callout ring, the split comparison,
+      the numbered list, the command, the option pills and the app card. Square and nine by
+      sixteen, and the vertical is built for the taller frame rather than cropped from the
+      square. Every label carries the wordmark only.</p>
+    <dl class="runbar">
+      <div class="run"><dt>ads</dt><dd>10</dd></div>
+      <div class="run"><dt>compositions</dt><dd>10</dd></div>
+      <div class="run"><dt>sizes</dt><dd>1:1 and 9:16</dd></div>
+      <div class="run"><dt>files</dt><dd>20</dd></div>
+      <div class="run"><dt>product images</dt><dd>1</dd></div>
+      <div class="run"><dt>spend</dt><dd>about $0.25</dd></div>
+    </dl>
+  </header>
+
+  <div class="dl">
+    <div class="txt">
+      <h3>Download the whole set</h3>
+      <p>All ten ads at 1:1 and 9:16, 20 files at full resolution, plus a short
+        readme naming what each one argues. One zip, made to drop straight into a Drive
+        folder and share on.</p>
+    </div>
+    <a class="btn" href="twyn-batch-02.zip" download>Download zip, 30.5 MB</a>
+  </div>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>What changed in this round</h2>
+      <p>You asked for the blur off this batch and said you would check it for
+        misalignments. Both below, including one I found doing that check and the part of
+        the blur I cannot fix for free.</p>
+    </div>
+    <div class="notes">
+      <p><b>A focus pass across all ten.</b> It lifts definition back up wherever the image
+        actually holds detail, and it is free, no re-rendering. You can see it most on the
+        linen weave, the travertine and the ceramic tray. The originals are untouched on my
+        side, so nothing here is destructive.</p>
+      <p><b>What the blur actually is, because it is not uniform.</b> The vials and the
+        labels were never soft. At full resolution the wordmark, the glass edges and the
+        stone pores all resolve cleanly. What is soft is the BACKGROUND on three of them:
+        the window and the plant behind the desk shot, the dried grass on the limestone,
+        and the far fold of the linen. That is depth of field in the original renders.</p>
+      <p><b>What the pass cannot do.</b> Sharpening lifts detail that is slightly soft. It
+        cannot invent detail the lens never caught, so the real background blur on those
+        three is still there and will stay there. Removing it properly means re-rendering
+        those scenes with a deep-focus rule, which spends on your key. Say the word and I
+        will, and I would rather ask than spend it on a guess. Worth saying plainly: on the
+        other seven what reads as blur is mostly an empty surface, a plain wall or a
+        seamless sweep with nothing in it to be sharp, and no amount of sharpening changes
+        that.</p>
+      <p><b>The misalignment you would have found.</b> On ad 8, the option pills one, the
+        VIEW THE CATALOG button was running off the LEFT edge of the frame on both sizes.
+        Not close to it, exactly on it, so the rounded left end of the button was sliced
+        flat. The cause was that one layout giving its footer row no side margin while every
+        other layout does. It now sits inside the same margin as the copy above it.</p>
+      <p><b>And a check so it is not eyes next time.</b> Every element is now measured
+        against the frame edge on every build, in the real renderer. It proves itself each
+        run by planting a deliberate overflow and refusing to report a pass unless it
+        catches it. Against the old code it reports that button at 0.0px and fails; against
+        this build all twenty files are clear. I also measured every ad before and after:
+        the only geometry that moved in the whole set is that button, so nothing else
+        shifted to pay for the fix.</p>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>The set</h2>
+      <p>Square on top, nine by sixteen under it, for each ad. Full resolution PNGs are
+        linked beside every pair, and each card names the argument it makes and the
+        archetype folder its composition came from.</p>
+    </div>
+    <div class="grid">
+    <div class="ad">
+      <div class="shot"><img src="twyn02/01-crossed-1x1.jpg" alt="Held in the US. Shipped from the US, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/01-crossed-9x16.jpg" alt="Held in the US. Shipped from the US, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">01-crossed</p>
+        <h3>Held in the US. Shipped from the US.</h3>
+        <p class="arg">SOURCING. Where it ships from is the thing you actually feel.</p>
+        <p class="dev">Composition from CROSSED/Prime8.</p>
+        <p class="skin"><a href="twyn02/01-crossed-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/01-crossed-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/02-news-1x1.jpg" alt="Ordered today. Moving today, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/02-news-9x16.jpg" alt="Ordered today. Moving today, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">02-news</p>
+        <h3>Ordered today. Moving today.</h3>
+        <p class="arg">SPEED. The order goes out fast, so the work is not waiting on the supplier.</p>
+        <p class="dev">Composition from NEWS/Prime10.</p>
+        <p class="skin"><a href="twyn02/02-news-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/02-news-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/03-question-based-1x1.jpg" alt="Who answers when something is wrong?, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/03-question-based-9x16.jpg" alt="Who answers when something is wrong?, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">03-question-based</p>
+        <h3>Who answers when something is wrong?</h3>
+        <p class="arg">SUPPORT. A person answers, which is rare in this category.</p>
+        <p class="dev">Composition from QUESTION BASED/Prime6.</p>
+        <p class="skin"><a href="twyn02/03-question-based-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/03-question-based-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/04-features-callout-1x1.jpg" alt="Clear product information, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/04-features-callout-9x16.jpg" alt="Clear product information, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">04-features-callout</p>
+        <h3>Clear product information.</h3>
+        <p class="arg">CLARITY OF LISTING. The page tells you what it is without decoding.</p>
+        <p class="dev">Composition from FEATURES/Prime5.</p>
+        <p class="skin"><a href="twyn02/04-features-callout-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/04-features-callout-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/05-us-vs-them-1x1.jpg" alt="In stock beats impressive, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/05-us-vs-them-9x16.jpg" alt="In stock beats impressive, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">05-us-vs-them</p>
+        <h3>In stock beats impressive.</h3>
+        <p class="arg">AVAILABILITY. The best supplier is the one that has it in stock.</p>
+        <p class="dev">Composition from US VS THEM/Prime4.</p>
+        <p class="skin"><a href="twyn02/05-us-vs-them-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/05-us-vs-them-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/06-features-list-1x1.jpg" alt="Packed to arrive intact, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/06-features-list-9x16.jpg" alt="Packed to arrive intact, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">06-features-list</p>
+        <h3>Packed to arrive intact.</h3>
+        <p class="arg">HANDLING. It arrives the way it left, which is a supply problem most brands ignore.</p>
+        <p class="dev">Composition from FEATURES/Prime5 (list variant).</p>
+        <p class="skin"><a href="twyn02/06-features-list-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/06-features-list-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/07-negative-command-1x1.jpg" alt="Do not buy on urgency, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/07-negative-command-9x16.jpg" alt="Do not buy on urgency, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">07-negative-command</p>
+        <h3>Do not buy on urgency.</h3>
+        <p class="arg">ANTI URGENCY. The category runs on countdowns and expiring codes; refusing that pressure is itself the pitch.</p>
+        <p class="dev">Composition from NEGATIVE/Prime9.</p>
+        <p class="skin"><a href="twyn02/07-negative-command-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/07-negative-command-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/08-quiz-1x1.jpg" alt="No promises. Just supply, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/08-quiz-9x16.jpg" alt="No promises. Just supply, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">08-quiz</p>
+        <h3>No promises. Just supply.</h3>
+        <p class="arg">ANTI HYPE. Refusing to promise an outcome is itself the pitch.</p>
+        <p class="dev">Composition from QUIZ/Prime7.</p>
+        <p class="skin"><a href="twyn02/08-quiz-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/08-quiz-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/09-app-1x1.jpg" alt="One shelf. One checkout, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/09-app-9x16.jpg" alt="One shelf. One checkout, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">09-app</p>
+        <h3>One shelf. One checkout.</h3>
+        <p class="arg">CONSOLIDATION. One supplier instead of five tabs and five checkouts.</p>
+        <p class="dev">Composition from APP/Prime2.</p>
+        <p class="skin"><a href="twyn02/09-app-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/09-app-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="twyn02/10-question-angled-1x1.jpg" alt="Ordered securely. Handled carefully, square" loading="lazy"></div>
+      <div class="shot"><img src="twyn02/10-question-angled-9x16.jpg" alt="Ordered securely. Handled carefully, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">10-question-angled</p>
+        <h3>Ordered securely. Handled carefully.</h3>
+        <p class="arg">DISCRETION. Secure ordering and careful handling, said without euphemism.</p>
+        <p class="dev">Composition from QUESTION BASED/Prime6 (mirrored variant).</p>
+        <p class="skin"><a href="twyn02/10-question-angled-1x1.png" style="color:var(--ink3)">1x1 png</a> / <a href="twyn02/10-question-angled-9x16.png" style="color:var(--ink3)">9x16 png</a></p>
+      </div>
+    </div>
+    </div>
+  </section>
+</div>
+
+<style>
+.notes p { margin:0 0 14px; color:var(--ink2); font-size:14.5px; line-height:1.6; }
+.notes b { color:var(--ink); }
+</style>
