@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Sequence Pure - TikTok tracking install</title>
+<style>
+  :root{
+    --bg:#0e1116; --panel:#161b22; --panel2:#1c2330; --line:#2a3340;
+    --ink:#e8edf4; --dim:#9aa7b8; --accent:#ff2d55; --accent2:#25f4ee; --ok:#3fb950;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;max-width:100%;overflow-x:hidden}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:32px 16px 80px}
+  header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:28px}
+  .kicker{color:var(--accent2);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0 0 8px}
+  h1{font-size:clamp(23px,5.4vw,34px);line-height:1.2;margin:0 0 10px;letter-spacing:-.02em}
+  .sub{color:var(--dim);margin:0;font-size:15px}
+  .pill{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:999px;
+        padding:3px 11px;font-size:12px;color:var(--dim);margin:10px 8px 0 0;font-variant-numeric:tabular-nums}
+  .pill b{color:var(--ink);font-weight:600}
+  h2{font-size:19px;margin:0;letter-spacing:-.01em}
+  h3{font-size:16px;margin:26px 0 8px}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);
+        border-radius:9px;padding:14px 16px;margin:0 0 26px}
+  .note.warn{border-left-color:var(--accent)}
+  .note p{margin:0 0 8px} .note p:last-child{margin:0}
+  .note h3{margin:0 0 8px;font-size:15px}
+  .step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;margin:0 0 20px;min-width:0}
+  .step-head{display:flex;gap:13px;align-items:flex-start;min-width:0}
+  .num{flex:0 0 auto;width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;
+       font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .step-title{min-width:0;flex:1 1 auto}
+  .meta{color:var(--dim);font-size:13px;margin:5px 0 0}
+  .meta b{color:var(--ink);font-weight:600}
+  .blurb{color:var(--dim);font-size:14.5px;margin:12px 0 14px}
+  .codewrap{border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#0b0e13;min-width:0}
+  .codebar{display:flex;align-items:center;justify-content:space-between;gap:10px;
+           background:var(--panel2);border-bottom:1px solid var(--line);padding:7px 11px;min-width:0}
+  .fname{font:12px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--dim);
+         overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .copy{flex:0 0 auto;background:var(--accent);color:#fff;border:0;border-radius:6px;
+        padding:5px 13px;font-size:12.5px;font-weight:600;cursor:pointer}
+  .copy:active{transform:translateY(1px)}
+  .copy.done{background:var(--ok)}
+  pre{margin:0;padding:13px;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}
+  code{font:12.5px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;color:#cfe3ff;white-space:pre;display:block}
+  ol,ul{padding-left:22px;margin:0 0 10px} li{margin:0 0 7px;color:var(--dim)}
+  li b,li code{color:var(--ink)}
+  p code,li code{background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;
+                 font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;white-space:normal;
+                 display:inline;word-break:break-word;overflow-wrap:anywhere}
+  footer{color:var(--dim);font-size:13px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <p class="kicker">Sequence Pure &middot; sequencepure.com</p>
+    <h1>TikTok tracking: three snippets to paste</h1>
+    <p class="sub">Everything below is built against your real pixel and tested. Paste them into WPCode in order, then verify with a test code and no real order.</p>
+    <span class="pill">Pixel <b>DANHHTBC77U1JKBFTBQG</b></span>
+    <span class="pill">Plugin <b>WPCode Lite</b></span>
+    <span class="pill">Store <b>WooCommerce</b></span>
+  </header>
+
+  <div class="note warn">
+    <h3>Do this first: the access token</h3>
+    <p>The token is deliberately <b>not</b> written into the snippet below, so this page can be shared without handing anyone your token. Add one line to <code>wp-config.php</code>, above the line that says <code>/* That's all, stop editing! */</code>:</p>
+    <div class="codewrap" style="margin:10px 0 8px">
+      <div class="codebar"><span class="fname">wp-config.php</span><button class="copy" type="button" data-target="code-cfg">Copy</button></div>
+      <pre><code id="code-cfg">define( 'SP_TTK_ACCESS_TOKEN', 'PASTE_YOUR_EVENTS_API_TOKEN_HERE' );</code></pre>
+    </div>
+    <p>Use the Events API token you generated in TikTok Events Manager for this pixel. Snippet 3 reads it from there, so rotating the token later never means editing a snippet.</p>
+  </div>
+
+  <div class="note">
+    <h3>How to add each one in WPCode</h3>
+    <p><b>Code Snippets &rarr; + Add Snippet &rarr; Add Your Custom Code (New Snippet)</b>, name it, pick the <b>Code Type</b> shown on the card, paste, set the <b>Location</b> shown, then flip it to <b>Active</b> and Save. Order matters: 1, then 2, then 3.</p>
+  </div>
+
+    <section class="step" id="snippet-1">
+      <div class="step-head">
+        <span class="num">1</span>
+        <div class="step-title">
+          <h2>TikTok base pixel</h2>
+          <p class="meta"><b>WPCode type:</b> HTML Snippet &nbsp;&middot;&nbsp; <b>Location:</b> Site Wide Header &nbsp;&middot;&nbsp; <b>Status:</b> Active</p>
+        </div>
+      </div>
+      <p class="blurb">Loads the TikTok pixel on every page and identifies the visitor when WooCommerce knows who they are. Nothing else fires without this one.</p>
+      <div class="codewrap">
+        <div class="codebar">
+          <span class="fname">1-tiktok-base.html</span>
+          <button class="copy" type="button" data-target="code-1">Copy</button>
+        </div>
+        <pre><code id="code-1">&lt;!--
+  Sequence Pure (sequencepure.com) - TikTok base pixel. SNIPPET 1 of 3.
+  WPCode: HTML Snippet, Site Wide Header, Active. Install this one FIRST.
+
+  Jason asked for WPCode snippets, not the official TikTok for Business WooCommerce plugin. This is
+  the browser half's foundation: the pixel loader, one page view, and the click-id capture the
+  SERVER half depends on.
+
+  Pixel DANHHTBC77U1JKBFTBQG is already filled in below, nothing to replace. That value is the pixel's
+  own Pixel Code from TikTok Events Manager (a ~20 character alphanumeric string), never an ad
+  account id and never a Business Center id; the build refuses a value shaped like either.
+
+  WHY THE CLICK-ID CAPTURE IS HERE AND NOT IN A PHP SNIPPET. TikTok attributes a server event by
+  ttclid (the click id on the landing URL) and ttp (the pixel's own first-party cookie). A visitor
+  lands from an ad on any page, then buys minutes or days later, and the gateway here is Tagada Pay,
+  which can complete a payment from a WEBHOOK where there is no browser, no cookie and no session.
+  So the click id is written to a first-party cookie the moment it is seen, and snippet 2 copies it
+  onto the ORDER at checkout so snippet 3 can still read it in a webhook. Capturing it only at
+  checkout would lose every visitor who did not arrive directly on the checkout page.
+
+  The cookie is first-party, 90 days (TikTok's own attribution window for ttclid), SameSite=Lax,
+  Secure, and holds only an opaque advertising click id: no email, no name, no phone.
+
+  NOTHING HERE BRANCHES ON USER AGENT, IP, GEO OR REFERRER.
+--&gt;
+&lt;script&gt;
+!function (w, d, t) {
+  w.TiktokAnalyticsObject = t;
+  var ttq = w[t] = w[t] || [];
+  ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+  ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))); }; };
+  for (var i = 0; i &lt; ttq.methods.length; i++) { ttq.setAndDefer(ttq, ttq.methods[i]); }
+  ttq.instance = function (t) {
+    var e = ttq._i[t] || [];
+    for (var n = 0; n &lt; ttq.methods.length; n++) { ttq.setAndDefer(e, ttq.methods[n]); }
+    return e;
+  };
+  ttq.load = function (e, n) {
+    var r = "https://analytics.tiktok.com/i18n/pixel/events.js";
+    ttq._i = ttq._i || {};
+    ttq._i[e] = [];
+    ttq._i[e]._u = r;
+    ttq._t = ttq._t || {};
+    ttq._t[e] = +new Date();
+    ttq._o = ttq._o || {};
+    ttq._o[e] = n || {};
+    var s = d.createElement("script");
+    s.type = "text/javascript";
+    s.async = !0;
+    s.src = r + "?sdkid=" + e + "&amp;lib=" + t;
+    var a = d.getElementsByTagName("script")[0];
+    a.parentNode.insertBefore(s, a);
+  };
+  ttq.load('DANHHTBC77U1JKBFTBQG');
+  ttq.page();
+
+  // ---- click-id capture, see the comment above ----
+  try {
+    var q = new URLSearchParams(w.location.search);
+    var clid = q.get('ttclid');
+    if (clid &amp;&amp; /^[A-Za-z0-9._-]{1,512}$/.test(clid)) {
+      d.cookie = 'sp_ttclid=' + encodeURIComponent(clid)
+        + '; Max-Age=7776000; Path=/; SameSite=Lax'
+        + (w.location.protocol === 'https:' ? '; Secure' : '');
+    }
+  } catch (e) { /* never let attribution break the page */ }
+}(window, document, 'ttq');
+&lt;/script&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="step" id="snippet-2">
+      <div class="step-head">
+        <span class="num">2</span>
+        <div class="step-title">
+          <h2>Browser events (WooCommerce)</h2>
+          <p class="meta"><b>WPCode type:</b> PHP Snippet &nbsp;&middot;&nbsp; <b>Location:</b> Run Everywhere &nbsp;&middot;&nbsp; <b>Status:</b> Active</p>
+        </div>
+      </div>
+      <p class="blurb">Sends ViewContent, AddToCart, InitiateCheckout and CompletePayment from the shopper's browser as they move through the store.</p>
+      <div class="codewrap">
+        <div class="codebar">
+          <span class="fname">2-tiktok-woo-browser.php</span>
+          <button class="copy" type="button" data-target="code-2">Copy</button>
+        </div>
+        <pre><code id="code-2">/**
+ * Sequence Pure (sequencepure.com) - TikTok browser events for WooCommerce. SNIPPET 2 of 3.
+ * WPCode: PHP Snippet, Run Everywhere, Active. Install AFTER snippet 1 (the base pixel).
+ *
+ * WHY THIS IS PHP AND NOT MORE HTML. Snippet 1 is a static site-wide header snippet, which is all a
+ * base pixel and a page view need. Every event below needs WooCommerce data that only exists in PHP
+ * (the product on screen, the cart total, the order on the receipt), so it cannot live in an HTML
+ * snippet. Jason's instruction was WPCode rather than the official plugin; it was not "one snippet".
+ *
+ * EVENTS, and why each is shaped this way. TikTok's standard ecommerce events are ViewContent,
+ * AddToCart, InitiateCheckout, AddPaymentInfo, PlaceAnOrder and CompletePayment.
+ *
+ *   ViewContent       single product page. value = price, currency, contents[].
+ *   AddToCart         classic product form adds (queued in the Woo session, printed on the next page
+ *                     load, carries value) AND ajax add-to-cart buttons (the added_to_cart JS event,
+ *                     NO value: that button markup carries a product id and never a price, and an
+ *                     invented value is worse than an absent optional one).
+ *   InitiateCheckout  checkout page only, never the receipt.
+ *   CompletePayment   thank-you page, event_id sp_purchase_&lt;order id&gt;.
+ *
+ * THE ONE THING THAT MUST NOT DRIFT: CompletePayment here and CompletePayment in snippet 3 send the
+ * SAME event_id, sp_purchase_&lt;order id&gt;, because TikTok dedupes on event_source_id + event_id +
+ * event. Change the format in one file and every sale is counted twice. Both files build it through
+ * the same documented format and tests/harness.php asserts they agree.
+ *
+ * INITIATECHECKOUT EVENT ID IS NOT WooCommerce's get_cart_hash(). On a live WooCommerce store that
+ * value changed between two plain refreshes of /checkout/, so it counted one shopper several times
+ * while every offline test still passed. The key here is built from sorted product id x quantity,
+ * which is stable across a refresh by construction.
+ *
+ * ORDERING IS NOT ASSUMED. Snippet 1 is an HTML header snippet and this is a PHP snippet, so which
+ * prints first is not guaranteed. Every call runs immediately if window.ttq already exists and on
+ * DOMContentLoaded otherwise, and never throws if snippet 1 is missing.
+ *
+ * POLICY. No advanced matching in the browser (no email, phone or name) and NO PRODUCT NAMES: this
+ * is a research peptide catalogue and compound names in event properties are the documented
+ * rejection shape on ad platforms. content_id is the WooCommerce product id and nothing else.
+ * Nothing branches on user agent, IP, geo or referrer.
+ *
+ * ALSO DOES ONE SERVER-SIDE JOB: it copies the TikTok click ids onto the order at checkout, which is
+ * what lets snippet 3 attribute a payment that completes later in a Tagada Pay webhook where there
+ * are no cookies at all. See sp_ttk_persist_click_ids().
+ *
+ * KILL SWITCH: define( 'SP_TTK_BROWSER_EVENTS', false ); turns every browser event here off without
+ * deactivating the snippet. The click-id persistence keeps running, because turning off reporting
+ * should not silently destroy attribution data you cannot recover later.
+ *
+ * LIMIT: block-based (Store API) cart adds fire no AddToCart here. ViewContent, InitiateCheckout and
+ * CompletePayment still fire.
+ */
+
+function sp_ttk_browser_on() {
+	return ! ( defined( 'SP_TTK_BROWSER_EVENTS' ) &amp;&amp; ! SP_TTK_BROWSER_EVENTS );
+}
+
+function sp_ttk_json( $v ) {
+	// HEX_TAG: a value containing &lt;/script&gt; can never close the tag early.
+	return wp_json_encode( $v, JSON_HEX_TAG | JSON_HEX_AMP | JSON_UNESCAPED_SLASHES );
+}
+
+function sp_ttk_currency() {
+	return function_exists( 'get_woocommerce_currency' ) ? strtoupper( (string) get_woocommerce_currency() ) : 'USD';
+}
+
+/**
+ * THE SHARED EVENT ID FORMAT. Snippet 3 has a byte-identical copy of this function under its own
+ * name and tests/harness.php asserts the two produce the same string for the same order id.
+ */
+function sp_ttk_purchase_event_id( $order_id ) {
+	return 'sp_purchase_' . (string) $order_id;
+}
+
+function sp_ttk_track( $event, $props = array(), $event_id = '' ) {
+	$args = sp_ttk_json( $event ) . ', ' . sp_ttk_json( (object) $props );
+	if ( '' !== $event_id ) {
+		$args .= ', ' . sp_ttk_json( array( 'event_id' =&gt; (string) $event_id ) );
+	}
+	$js = 'ttq.track(' . $args . ');';
+	echo "\n&lt;script&gt;(function(){var f=function(){try{" . $js . "}catch(e){}};"
+		. "if(window.ttq&amp;&amp;window.ttq.track){f();}"
+		. "else if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}"
+		. "else{f();}})();&lt;/script&gt;\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+
+/** contents[] for one product. content_id only, never a name. See POLICY above. */
+function sp_ttk_contents( $product_id, $qty, $price ) {
+	$row = array(
+		'content_id'   =&gt; (string) $product_id,
+		'content_type' =&gt; 'product',
+		'quantity'     =&gt; (int) $qty,
+	);
+	if ( null !== $price ) {
+		$row['price'] = round( (float) $price, 2 );
+	}
+	return array( $row );
+}
+
+/* ------------------------------------------------------------------ ViewContent */
+add_action( 'wp_footer', 'sp_ttk_view_content', 20 );
+function sp_ttk_view_content() {
+	if ( ! sp_ttk_browser_on() || ! function_exists( 'is_product' ) || ! is_product() ) {
+		return;
+	}
+	$product = function_exists( 'wc_get_product' ) ? wc_get_product( get_the_ID() ) : null;
+	if ( ! $product ) {
+		return;
+	}
+	$price = $product-&gt;get_price();
+	sp_ttk_track(
+		'ViewContent',
+		array(
+			'contents' =&gt; sp_ttk_contents( $product-&gt;get_id(), 1, $price ),
+			'value'    =&gt; round( (float) $price, 2 ),
+			'currency' =&gt; sp_ttk_currency(),
+		)
+	);
+}
+
+/* ------------------------------------------------------------------ AddToCart, classic form */
+add_action( 'woocommerce_add_to_cart', 'sp_ttk_queue_add_to_cart', 20, 6 );
+function sp_ttk_queue_add_to_cart( $cart_item_key, $product_id, $quantity, $variation_id, $variation, $cart_item_data ) {
+	if ( ! sp_ttk_browser_on() ) {
+		return;
+	}
+	// An ajax add is handled in the browser by the added_to_cart listener below. Queueing it here as
+	// well would print the same add on the NEXT page load and count it twice.
+	if ( function_exists( 'wp_doing_ajax' ) &amp;&amp; wp_doing_ajax() ) {
+		return;
+	}
+	if ( ! function_exists( 'WC' ) || ! WC()-&gt;session ) {
+		return;
+	}
+	$id      = $variation_id ? $variation_id : $product_id;
+	$product = function_exists( 'wc_get_product' ) ? wc_get_product( $id ) : null;
+	$price   = $product ? (float) $product-&gt;get_price() : 0.0;
+	$queue   = (array) WC()-&gt;session-&gt;get( 'sp_ttk_atc_queue', array() );
+	$queue[] = array(
+		'id'    =&gt; $id,
+		'qty'   =&gt; (int) $quantity,
+		'price' =&gt; $price,
+	);
+	WC()-&gt;session-&gt;set( 'sp_ttk_atc_queue', $queue );
+}
+
+add_action( 'wp_footer', 'sp_ttk_flush_add_to_cart', 21 );
+function sp_ttk_flush_add_to_cart() {
+	if ( ! sp_ttk_browser_on() || ! function_exists( 'WC' ) || ! WC()-&gt;session ) {
+		return;
+	}
+	$queue = (array) WC()-&gt;session-&gt;get( 'sp_ttk_atc_queue', array() );
+	if ( ! $queue ) {
+		return;
+	}
+	WC()-&gt;session-&gt;set( 'sp_ttk_atc_queue', array() );
+	foreach ( $queue as $row ) {
+		sp_ttk_track(
+			'AddToCart',
+			array(
+				'contents' =&gt; sp_ttk_contents( $row['id'], $row['qty'], $row['price'] ),
+				'value'    =&gt; round( (float) $row['price'] * (int) $row['qty'], 2 ),
+				'currency' =&gt; sp_ttk_currency(),
+			)
+		);
+	}
+}
+
+/* ------------------------------------------------------------------ AddToCart, ajax buttons */
+add_action( 'wp_footer', 'sp_ttk_ajax_add_to_cart', 22 );
+function sp_ttk_ajax_add_to_cart() {
+	if ( ! sp_ttk_browser_on() || ! function_exists( 'is_woocommerce' ) ) {
+		return;
+	}
+	echo "\n&lt;script&gt;(function(){if(!window.jQuery){return;}"
+		. "jQuery(document.body).on('added_to_cart',function(e,frag,hash,\$btn){"
+		. "try{var id=\$btn&amp;&amp;\$btn.data?(\$btn.data('product_id')||\$btn.data('productId')):null;"
+		. "if(!id||!window.ttq||!window.ttq.track){return;}"
+		// No value on purpose: the button markup carries an id, never a price.
+		. "window.ttq.track('AddToCart',{contents:[{content_id:String(id),content_type:'product',quantity:1}]});"
+		. "}catch(err){}});})();&lt;/script&gt;\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+
+/* ------------------------------------------------------------------ InitiateCheckout */
+add_action( 'wp_footer', 'sp_ttk_initiate_checkout', 23 );
+function sp_ttk_initiate_checkout() {
+	if ( ! sp_ttk_browser_on() || ! function_exists( 'is_checkout' ) || ! is_checkout() ) {
+		return;
+	}
+	// The receipt is also is_checkout(); CompletePayment owns that page.
+	if ( function_exists( 'is_order_received_page' ) &amp;&amp; is_order_received_page() ) {
+		return;
+	}
+	if ( ! function_exists( 'WC' ) || ! WC()-&gt;cart || WC()-&gt;cart-&gt;is_empty() ) {
+		return;
+	}
+	$contents = array();
+	$key      = array();
+	foreach ( WC()-&gt;cart-&gt;get_cart() as $item ) {
+		$id    = ! empty( $item['variation_id'] ) ? $item['variation_id'] : $item['product_id'];
+		$qty   = (int) $item['quantity'];
+		$price = isset( $item['line_total'] ) &amp;&amp; $qty &gt; 0 ? (float) $item['line_total'] / $qty : null;
+		$contents[] = array(
+			'content_id'   =&gt; (string) $id,
+			'content_type' =&gt; 'product',
+			'quantity'     =&gt; $qty,
+		);
+		if ( null !== $price ) {
+			$contents[ count( $contents ) - 1 ]['price'] = round( $price, 2 );
+		}
+		$key[] = $id . 'x' . $qty;
+	}
+	// Stable across a refresh by construction. NEVER get_cart_hash(), see the header comment.
+	sort( $key );
+	sp_ttk_track(
+		'InitiateCheckout',
+		array(
+			'contents' =&gt; $contents,
+			'value'    =&gt; round( (float) WC()-&gt;cart-&gt;get_total( 'edit' ), 2 ),
+			'currency' =&gt; sp_ttk_currency(),
+		),
+		'sp_ic_' . md5( implode( '|', $key ) )
+	);
+}
+
+/* ------------------------------------------------------------------ CompletePayment */
+add_action( 'woocommerce_thankyou', 'sp_ttk_complete_payment', 20, 1 );
+function sp_ttk_complete_payment( $order_id ) {
+	if ( ! sp_ttk_browser_on() || ! $order_id || ! function_exists( 'wc_get_order' ) ) {
+		return;
+	}
+	$order = wc_get_order( $order_id );
+	if ( ! $order ) {
+		return;
+	}
+	// A receipt reload must not send a second browser event. The server half (snippet 3) has its own
+	// separate marker, because the two halves are meant to both fire once and dedupe on event_id.
+	if ( $order-&gt;get_meta( '_sp_ttk_browser_sent' ) ) {
+		return;
+	}
+	$contents = array();
+	foreach ( $order-&gt;get_items() as $item ) {
+		$id  = $item-&gt;get_variation_id() ? $item-&gt;get_variation_id() : $item-&gt;get_product_id();
+		$qty = (int) $item-&gt;get_quantity();
+		$row = array(
+			'content_id'   =&gt; (string) $id,
+			'content_type' =&gt; 'product',
+			'quantity'     =&gt; $qty,
+		);
+		if ( $qty &gt; 0 ) {
+			$row['price'] = round( (float) $item-&gt;get_total() / $qty, 2 );
+		}
+		$contents[] = $row;
+	}
+	sp_ttk_track(
+		'CompletePayment',
+		array(
+			'contents' =&gt; $contents,
+			'value'    =&gt; round( (float) $order-&gt;get_total(), 2 ),
+			'currency' =&gt; strtoupper( (string) $order-&gt;get_currency() ),
+		),
+		sp_ttk_purchase_event_id( $order-&gt;get_id() )
+	);
+	$order-&gt;update_meta_data( '_sp_ttk_browser_sent', 'yes:' . time() );
+	$order-&gt;save();
+}
+
+/* ------------------------------------------------------------------ click ids onto the order */
+/**
+ * Runs whether or not the browser events are switched on. See the KILL SWITCH note in the header.
+ * ttclid comes from snippet 1's first-party cookie, ttp is the pixel's own _ttp cookie. Both are
+ * opaque advertising ids. A payment that completes later in a Tagada Pay webhook has neither, which
+ * is exactly why they are copied onto the order here while a browser is still present.
+ */
+add_action( 'woocommerce_checkout_create_order', 'sp_ttk_persist_click_ids', 20, 2 );
+function sp_ttk_persist_click_ids( $order, $data ) {
+	if ( ! is_object( $order ) ) {
+		return;
+	}
+	$clid = isset( $_COOKIE['sp_ttclid'] ) ? (string) $_COOKIE['sp_ttclid'] : '';
+	$ttp  = isset( $_COOKIE['_ttp'] ) ? (string) $_COOKIE['_ttp'] : '';
+	if ( $clid &amp;&amp; preg_match( '/^[A-Za-z0-9._%-]{1,512}$/', $clid ) ) {
+		$order-&gt;update_meta_data( '_sp_ttclid', urldecode( $clid ) );
+	}
+	if ( $ttp &amp;&amp; preg_match( '/^[A-Za-z0-9._-]{1,512}$/', $ttp ) ) {
+		$order-&gt;update_meta_data( '_sp_ttp', $ttp );
+	}
+	$ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? substr( (string) $_SERVER['HTTP_USER_AGENT'], 0, 500 ) : '';
+	if ( $ua ) {
+		$order-&gt;update_meta_data( '_sp_ttk_ua', $ua );
+	}
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="step" id="snippet-3">
+      <div class="step-head">
+        <span class="num">3</span>
+        <div class="step-title">
+          <h2>Server side purchase (Events API)</h2>
+          <p class="meta"><b>WPCode type:</b> PHP Snippet &nbsp;&middot;&nbsp; <b>Location:</b> Run Everywhere &nbsp;&middot;&nbsp; <b>Status:</b> Active</p>
+        </div>
+      </div>
+      <p class="blurb">Posts the purchase to TikTok from your server, so a sale still records when the browser pixel is blocked. It shares one event id with snippet 2, so TikTok counts the sale once, not twice.</p>
+      <div class="codewrap">
+        <div class="codebar">
+          <span class="fname">3-tiktok-events-api.php</span>
+          <button class="copy" type="button" data-target="code-3">Copy</button>
+        </div>
+        <pre><code id="code-3">/**
+ * Sequence Pure (sequencepure.com) - TikTok Events API, server half. SNIPPET 3 of 3.
+ * WPCode: PHP Snippet, Run Everywhere, Active. Install AFTER snippets 1 and 2.
+ *
+ * Jason asked for WPCode snippets, not the official TikTok for Business WooCommerce plugin, so the
+ * server half is this: WooCommerce payment hooks posting straight to the Events API.
+ *
+ * Pixel DANHHTBC77U1JKBFTBQG is already filled in below - nothing to replace.
+ * The access token is NOT in this file on purpose. Put it in wp-config.php as
+ * define( 'SP_TTK_ACCESS_TOKEN', '...' ); and this snippet picks it up.
+ *
+ * SCHEMA, verified 2026-09-19 against TikTok's live docs, do not re-research:
+ *   POST https://business-api.tiktok.com/open_api/v1.3/event/track/
+ *   headers: Access-Token, Content-Type: application/json
+ *   body:    event_source "web", event_source_id = the Pixel Code, data[] of
+ *            { event, event_time (int, seconds), event_id, user{}, page{}, properties{} }
+ *   user:    email, phone, external_id are SHA-256 REQUIRED (email trimmed and lowercased first,
+ *            phone normalised to E.164 first); ttclid, ttp, ip, user_agent are sent unhashed.
+ *   TikTok dedupes on event_source_id + event_id + event.
+ *
+ * THE ONE THING THAT MUST NOT DRIFT: sp_ttk_api_purchase_event_id() below produces the same string
+ * as sp_ttk_purchase_event_id() in snippet 2, sp_purchase_&lt;order id&gt;. If they ever disagree, TikTok
+ * stops seeing the browser and server CompletePayment as one event and counts every sale twice.
+ * tests/harness.php asserts the two agree, and a mutant that breaks it is a red control.
+ *
+ * WHY TWO HOOKS. woocommerce_payment_complete is the honest "money moved" signal and is the one that
+ * fires for an asynchronous gateway. Tagada Pay is the gateway here and can complete a payment from
+ * a WEBHOOK where there is no browser, no cookie and no session, which is why the click ids are read
+ * off the ORDER (snippet 2 put them there) and never out of $_COOKIE. woocommerce_thankyou is the
+ * backstop for a gateway that marks an order paid without firing payment_complete. The meta marker
+ * makes running both harmless.
+ *
+ * THE MARKER MUST NOT TRAP A FAILURE. It is written only on a SUCCESSFUL post, as yes:&lt;ts&gt;. A failed
+ * attempt writes failed:&lt;ts&gt;, which does NOT block a later retry: the gate tests specifically for
+ * the yes: prefix, not for the meta being non-empty. A marker that blocks retry after a network
+ * blip loses the sale silently and forever, and that is a red control in the suite.
+ *
+ * NO TEST ORDER. Do not place a real WooCommerce order to verify this. Set
+ * define( 'SP_TTK_TEST_EVENT_CODE', '&lt;code from Events Manager&gt;' ); and the post carries
+ * test_event_code so it lands in Test Events and nowhere else. Remove the constant afterwards.
+ *
+ * KILL SWITCH: define( 'SP_TTK_SERVER_EVENTS', false );
+ * The access token is never echoed, never logged and never put in a URL.
+ */
+
+function sp_ttk_api_on() {
+	return ! ( defined( 'SP_TTK_SERVER_EVENTS' ) &amp;&amp; ! SP_TTK_SERVER_EVENTS );
+}
+
+function sp_ttk_api_pixel_code() {
+	if ( defined( 'SP_TTK_PIXEL_CODE' ) &amp;&amp; SP_TTK_PIXEL_CODE ) {
+		return (string) SP_TTK_PIXEL_CODE;
+	}
+	return 'DANHHTBC77U1JKBFTBQG';
+}
+
+function sp_ttk_api_access_token() {
+	// wp-config.php wins, so the token can be rotated without editing this snippet.
+	if ( defined( 'SP_TTK_ACCESS_TOKEN' ) &amp;&amp; SP_TTK_ACCESS_TOKEN ) {
+		return (string) SP_TTK_ACCESS_TOKEN;
+	}
+	return ''; // set SP_TTK_ACCESS_TOKEN in wp-config.php
+}
+
+/** Byte-identical result to sp_ttk_purchase_event_id() in snippet 2. See the header comment. */
+function sp_ttk_api_purchase_event_id( $order_id ) {
+	return 'sp_purchase_' . (string) $order_id;
+}
+
+function sp_ttk_api_hash( $v ) {
+	$v = trim( (string) $v );
+	return '' === $v ? '' : hash( 'sha256', $v );
+}
+
+function sp_ttk_api_hash_email( $email ) {
+	$email = strtolower( trim( (string) $email ) );
+	return '' === $email ? '' : hash( 'sha256', $email );
+}
+
+/**
+ * E.164 before hashing, which is what TikTok matches on. Digits only, leading +, and a US number
+ * given as 10 digits gets the country code it is missing. A number we cannot normalise is DROPPED
+ * rather than sent in a shape that can never match: a wrong hash is not a weaker match, it is a
+ * permanent non-match that looks like a match was attempted.
+ */
+function sp_ttk_api_hash_phone( $phone, $country = 'US' ) {
+	$raw = preg_replace( '/[^0-9+]/', '', (string) $phone );
+	if ( '' === (string) $raw ) {
+		return '';
+	}
+	if ( 0 === strpos( $raw, '+' ) ) {
+		$digits = preg_replace( '/[^0-9]/', '', $raw );
+		return strlen( (string) $digits ) &gt;= 8 ? hash( 'sha256', '+' . $digits ) : '';
+	}
+	$digits = preg_replace( '/[^0-9]/', '', $raw );
+	if ( 'US' === strtoupper( (string) $country ) ) {
+		if ( 10 === strlen( (string) $digits ) ) {
+			return hash( 'sha256', '+1' . $digits );
+		}
+		if ( 11 === strlen( (string) $digits ) &amp;&amp; 0 === strpos( $digits, '1' ) ) {
+			return hash( 'sha256', '+' . $digits );
+		}
+	}
+	return strlen( (string) $digits ) &gt;= 8 ? hash( 'sha256', '+' . $digits ) : '';
+}
+
+function sp_ttk_api_client_ip( $order ) {
+	$ip = is_object( $order ) &amp;&amp; method_exists( $order, 'get_customer_ip_address' ) ? (string) $order-&gt;get_customer_ip_address() : '';
+	if ( '' === $ip &amp;&amp; isset( $_SERVER['REMOTE_ADDR'] ) ) {
+		$ip = (string) $_SERVER['REMOTE_ADDR'];
+	}
+	return filter_var( $ip, FILTER_VALIDATE_IP ) ? $ip : '';
+}
+
+/* ------------------------------------------------------------------ the send */
+add_action( 'woocommerce_payment_complete', 'sp_ttk_api_purchase', 20, 1 );
+add_action( 'woocommerce_thankyou', 'sp_ttk_api_purchase', 30, 1 );
+function sp_ttk_api_purchase( $order_id ) {
+	if ( ! sp_ttk_api_on() || ! $order_id || ! function_exists( 'wc_get_order' ) ) {
+		return;
+	}
+	$order = wc_get_order( $order_id );
+	if ( ! $order ) {
+		return;
+	}
+	// yes: ONLY. A failed: marker must never block a retry. See the header comment.
+	if ( 0 === strpos( (string) $order-&gt;get_meta( '_sp_ttk_server_sent' ), 'yes' ) ) {
+		return;
+	}
+
+	$contents = array();
+	foreach ( $order-&gt;get_items() as $item ) {
+		$id  = $item-&gt;get_variation_id() ? $item-&gt;get_variation_id() : $item-&gt;get_product_id();
+		$qty = (int) $item-&gt;get_quantity();
+		$row = array(
+			'content_id'   =&gt; (string) $id,
+			'content_type' =&gt; 'product',
+			'quantity'     =&gt; $qty,
+		);
+		if ( $qty &gt; 0 ) {
+			$row['price'] = round( (float) $item-&gt;get_total() / $qty, 2 );
+		}
+		$contents[] = $row;
+	}
+
+	// Identifiers only. No product names, same policy as snippet 2.
+	$user = array();
+	$e = sp_ttk_api_hash_email( $order-&gt;get_billing_email() );
+	if ( $e ) {
+		$user['email'] = $e;
+	}
+	$p = sp_ttk_api_hash_phone( $order-&gt;get_billing_phone(), $order-&gt;get_billing_country() );
+	if ( $p ) {
+		$user['phone'] = $p;
+	}
+	if ( $order-&gt;get_customer_id() ) {
+		$user['external_id'] = sp_ttk_api_hash( 'sp_cust_' . $order-&gt;get_customer_id() );
+	}
+	$clid = (string) $order-&gt;get_meta( '_sp_ttclid' );
+	if ( $clid ) {
+		$user['ttclid'] = $clid;
+	}
+	$ttp = (string) $order-&gt;get_meta( '_sp_ttp' );
+	if ( $ttp ) {
+		$user['ttp'] = $ttp;
+	}
+	$ip = sp_ttk_api_client_ip( $order );
+	if ( $ip ) {
+		$user['ip'] = $ip;
+	}
+	$ua = (string) $order-&gt;get_meta( '_sp_ttk_ua' );
+	if ( '' === $ua &amp;&amp; isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
+		$ua = substr( (string) $_SERVER['HTTP_USER_AGENT'], 0, 500 );
+	}
+	if ( $ua ) {
+		$user['user_agent'] = $ua;
+	}
+
+	$body = array(
+		'event_source'    =&gt; 'web',
+		'event_source_id' =&gt; sp_ttk_api_pixel_code(),
+		'data'            =&gt; array(
+			array(
+				'event'      =&gt; 'CompletePayment',
+				'event_time' =&gt; (int) ( $order-&gt;get_date_created() ? $order-&gt;get_date_created()-&gt;getTimestamp() : time() ),
+				'event_id'   =&gt; sp_ttk_api_purchase_event_id( $order-&gt;get_id() ),
+				'user'       =&gt; (object) $user,
+				'page'       =&gt; (object) array(
+					'url' =&gt; function_exists( 'wc_get_checkout_url' ) ? wc_get_checkout_url() : home_url( '/' ),
+				),
+				'properties' =&gt; (object) array(
+					'contents'     =&gt; $contents,
+					'content_type' =&gt; 'product',
+					'value'        =&gt; round( (float) $order-&gt;get_total(), 2 ),
+					'currency'     =&gt; strtoupper( (string) $order-&gt;get_currency() ),
+				),
+			),
+		),
+	);
+	if ( defined( 'SP_TTK_TEST_EVENT_CODE' ) &amp;&amp; SP_TTK_TEST_EVENT_CODE ) {
+		$body['test_event_code'] = (string) SP_TTK_TEST_EVENT_CODE;
+	}
+
+	$res = wp_remote_post(
+		'https://business-api.tiktok.com/open_api/v1.3/event/track/',
+		array(
+			'timeout' =&gt; 15,
+			'headers' =&gt; array(
+				'Access-Token' =&gt; sp_ttk_api_access_token(),
+				'Content-Type' =&gt; 'application/json',
+			),
+			'body'    =&gt; wp_json_encode( $body ),
+		)
+	);
+
+	// TikTok answers HTTP 200 with a body-level code; 0 is success and anything else is not. Judging
+	// on the status code alone would record a rejected event as sent.
+	$ok   = false;
+	$note = '';
+	if ( is_wp_error( $res ) ) {
+		$note = 'transport: ' . $res-&gt;get_error_message();
+	} else {
+		$decoded = json_decode( (string) wp_remote_retrieve_body( $res ), true );
+		$code    = is_array( $decoded ) &amp;&amp; array_key_exists( 'code', $decoded ) ? (int) $decoded['code'] : -1;
+		$ok      = ( 200 === (int) wp_remote_retrieve_response_code( $res ) &amp;&amp; 0 === $code );
+		$note    = 'http ' . wp_remote_retrieve_response_code( $res ) . ' code ' . $code
+			. ( is_array( $decoded ) &amp;&amp; isset( $decoded['message'] ) ? ' ' . substr( (string) $decoded['message'], 0, 200 ) : '' );
+	}
+
+	$order-&gt;update_meta_data( '_sp_ttk_server_sent', ( $ok ? 'yes:' : 'failed:' ) . time() );
+	// The note never contains the token: it is built only from TikTok's own response fields.
+	$order-&gt;update_meta_data( '_sp_ttk_server_note', $note );
+	$order-&gt;save();
+}</code></pre>
+      </div>
+    </section>
+
+  <section class="step">
+    <div class="step-head">
+      <span class="num" style="background:var(--ok)">&#10003;</span>
+      <div class="step-title"><h2>Verify without placing a real order</h2></div>
+    </div>
+    <ol>
+      <li>In <code>wp-config.php</code> add <code>define( 'SP_TTK_TEST_EVENT_CODE', '&lt;code from Events Manager&gt;' );</code></li>
+      <li>In TikTok Events Manager open <b>Test Events</b> for this pixel.</li>
+      <li>Load a product page, add to cart, open checkout. The browser events should appear straight away.</li>
+      <li>For the purchase, do <b>not</b> buy anything. Take an order that is already paid and re-run the server half against it.</li>
+      <li>Confirm the purchase shows as <b>one</b> event, not two. Both halves send the same <code>event_id</code> (<code>sp_purchase_&lt;order id&gt;</code>) and TikTok de-duplicates on it.</li>
+      <li>Remove <code>SP_TTK_TEST_EVENT_CODE</code> when you are done, or real traffic keeps landing in Test Events instead of your live reporting.</li>
+    </ol>
+    <h3>Switches, if you ever need them</h3>
+    <ul>
+      <li><code>define( 'SP_TTK_BROWSER_EVENTS', false );</code> turns off snippet 2.</li>
+      <li><code>define( 'SP_TTK_SERVER_EVENTS', false );</code> turns off snippet 3.</li>
+    </ul>
+    <h3>One known limit</h3>
+    <ul>
+      <li>If a product is added to the cart through a block based (Store API) cart, that one add does not fire AddToCart. ViewContent, InitiateCheckout and CompletePayment are unaffected.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Built and tested against the live pixel before delivery. Tell me when the three are in and I will verify the events with you in Test Events.
+  </footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var el = document.getElementById(btn.dataset.target);
+    if (!el) return;
+    var text = el.textContent;
+    var done = function(){
+      var old = btn.textContent;
+      btn.textContent = 'Copied'; btn.classList.add('done');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('done'); }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function(){ fallback(text, done); });
+    } else { fallback(text, done); }
+  });
+});
+function fallback(text, done){
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.setAttribute('readonly','');
+  ta.style.position = 'fixed'; ta.style.top = '-1000px';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); done(); } catch(e) {}
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
