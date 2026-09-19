@@ -1,0 +1,311 @@
+<title>Axion Research, seven statics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Axion Research &middot; static set, round two</p>
+    <h1>Seven arguments, nothing on them that has to come off</h1>
+    <p class="sub">Built the same way as the first set, which is what you asked for: one master
+      vial render reused across all seven ads, the product rendered inside each scene rather
+      than sat on a background, and a different argument in every ad instead of one argument in
+      seven treatments. The vial is seeded from your own product photograph, so the glass, the
+      cap, the crimp and the lockup are the real ones. Square and nine by sixteen are composed
+      separately rather than cropped from each other. What has changed is everything you named:
+      no discount, no code, no offer language, no percentage, and the research use line is off
+      the artwork. The label carries your lockup and nothing else. Every button reads Learn More and View Coa.</p>
+    <dl class="runbar">
+      <div class="run"><dt>ads</dt><dd>7</dd></div>
+      <div class="run"><dt>arguments</dt><dd>7</dd></div>
+      <div class="run"><dt>looks</dt><dd>4</dd></div>
+      <div class="run"><dt>sizes</dt><dd>square and nine by sixteen</dd></div>
+      <div class="run"><dt>files</dt><dd>14</dd></div>
+    </dl>
+  </header>
+
+  <div class="dl">
+    <div class="txt">
+      <h3>Download the whole set</h3>
+      <p>All seven ads at square and nine by sixteen, 14 files at full resolution, plus a readme naming the
+        argument each one runs. One zip, ready to drop into a Drive folder.</p>
+    </div>
+    <a class="btn" href="axion-statics-02.zip" download>Download zip, 34 MB</a>
+  </div>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>What came off, and what that cost</h2>
+      <p>Each of these is your instruction applied, and one of them changed the shape of the
+        set rather than just the words on it.</p>
+    </div>
+    <div class="notes">
+      <p><b>Seven ads, not eight.</b> The first set had eight and the eighth was the offer ad.
+        An offer ad is built around a code, and you have removed the code, so that ad has no
+        argument left to make. Rather than fake a discount back in or pad the set with a
+        seventh treatment of an argument that is already here, it is simply not in this round.
+        If a promotion comes back later, that ad comes back with it.</p>
+      <p><b>The label is blank apart from your lockup.</b> No purity figure, no research use
+        line, no fine print, empty compound band. Worth knowing that this sits behind a
+        deliberately empty setting rather than a deleted one: the pipeline falls back to a
+        default that prints a purity claim and the research wording if that setting is merely
+        missing, so it is held empty on purpose and a check runs on every build to prove it.</p>
+      <p><b>The word RESEARCH is still under AXION, and that is your call to make.</b> It is
+        part of your actual logo, copied from your own product photograph, so taking it out
+        would mean inventing a lockup your brand does not use, which is the reason the very
+        first version was rejected. It is on the vial as brand, not as a claim. The before and
+        after are side by side at <a href="axion02-vial.html" style="color:var(--ink3)">the
+        vial page</a>. Say the word and it comes off, and it means re-rendering the master vial
+        and all fourteen files, which is quick.</p>
+      <p><b>No percentage anywhere, including the one on your own site.</b> Your storefront
+        publishes a purity figure and it is real, but a percentage on paid-social artwork is
+        the kind of thing that gets a whole account looked at, so it stays off the image. The
+        subhead does the same job a different way: purity you can check yourself.</p>
+      <p><b>Every button is one of the two you named.</b> Learn More and View Coa, alternating on purpose:
+        View COA where the ad is arguing about the paperwork, Learn More where it is arguing
+        about the product or the brand. View COA is a real destination, your COA page is
+        live, so it is not a button that goes nowhere.</p>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>The set</h2>
+      <p>Square on top, nine by sixteen under it, for each ad. Each card names the argument it
+        runs and the button it carries. Full resolution is in the zip.</p>
+    </div>
+    <div class="grid">
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/us-vs-them-1x1.jpg" alt="us-vs-them, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/us-vs-them-9x16.jpg" alt="us-vs-them, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">us-vs-them</p>
+        <h3>The comparison</h3>
+        <p class="arg">Four things a lot report gives you, set against a vial that arrives with none of them.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads Learn More</p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/crossed-1x1.jpg" alt="crossed, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/crossed-9x16.jpg" alt="crossed, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">crossed</p>
+        <h3>The correction</h3>
+        <p class="arg">Trust is the wrong verb for something you can open and read. Verify is the right one.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads View Coa</p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/question-based-1x1.jpg" alt="question-based, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/question-based-9x16.jpg" alt="question-based, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">question-based</p>
+        <h3>The question</h3>
+        <p class="arg">Asks the one question a buyer cannot answer about the vial already in their fridge.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads View Coa</p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/quiz-1x1.jpg" alt="quiz, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/quiz-9x16.jpg" alt="quiz, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">quiz</p>
+        <h3>The quiz</h3>
+        <p class="arg">Three answers, and the only one with paperwork behind it is the third.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads View Coa</p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/features-1x1.jpg" alt="features, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/features-9x16.jpg" alt="features, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">features</p>
+        <h3>The product</h3>
+        <p class="arg">The vial itself, called out part by part: the label, the seal, the lot, the report.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads Learn More</p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/news-1x1.jpg" alt="news, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/news-9x16.jpg" alt="news, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">news</p>
+        <h3>The bulletin</h3>
+        <p class="arg">Framed as an announcement rather than an ad, for the scroll that ignores ads.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads Learn More</p>
+      </div>
+    </div>
+    <div class="ad">
+      <div class="shot"><img src="axion02/set/negative-1x1.jpg" alt="negative, square" loading="lazy"></div>
+      <div class="shot"><img src="axion02/set/negative-9x16.jpg" alt="negative, nine by sixteen" loading="lazy"></div>
+      <div class="cap">
+        <p class="key">negative</p>
+        <h3>The refusal</h3>
+        <p class="arg">Tells them not to buy it, then gives the condition. The condition is the argument.</p>
+        <p class="skin">square and nine by sixteen &middot; button reads View Coa</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>How these were checked</h2>
+      <p>Worth one paragraph, because the whole point of this round is the words that are not
+        on the artwork, and that is not something you can confirm by glancing at a thumbnail.</p>
+    </div>
+    <div class="notes">
+      <p><b>The artwork was read, not just looked at.</b> Every one of the fourteen files was
+        put through text recognition at full size and again at double size, and the text that
+        came back was checked against a list: research use wording, any discount or code or
+        offer language, any percentage, any price, any dose, any compound name, any purity
+        claim. Nothing on that list was found on any file.</p>
+      <p><b>The check was proved capable of failing first.</b> A check that cannot fail is not
+        a check. Before it was run on your ads it was run on a frame deliberately carrying
+        "For research use only, 30% off, code SUMMER30", and it caught all three. It was also
+        run against your own approved subhead to be sure it does not fire on wording you do
+        want. Two hundred and twenty nine checks in total, all passing.</p>
+      <p><b>Six files were thrown away and re-made, and none of it was compliance.</b>
+        One invented a line of copy that was never in the brief. One drew the button in a shape
+        that made it read as a fourth quiz answer. The rest were re-rolled over the accent
+        described below. None of those is something an automated check can see, which is why
+        every file also gets looked at by eye at full size before it goes anywhere.</p>
+      <p><b>One thing I have not fixed, and you should see it before these run.</b> On three of
+        the fourteen files the word DOCUMENTED is drawn with a small accent over the E, so it
+        reads DOCUMENT&Eacute;D. They are the two Features files and the square Us vs Them file;
+        the other five files carrying that word are clean, checked one at a time at high
+        magnification. It is invisible at feed size and obvious if you zoom in. The
+        image model adds it on its own; the instruction not to is already in the prompt and it
+        was ignored on every re-roll, and text recognition reads the word as correct on two of
+        the three, so no automated check catches it either. I could paint it out, and I built the
+        tool and then threw it away: on the vertical layouts it removed the comma from EVERY LOT
+        instead, because the comma of the line above sits in exactly the same place as an accent
+        on the line below. I would rather hand you a typo I have told you about than artwork I
+        quietly damaged. The reliable fix is to stop letting the model draw the headline at all
+        and set that type in code over the render, which is how the other sets here are built,
+        and it makes every future wording change free. Say the word and I will do that.</p>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="sheet-head">
+      <h2>Still with you</h2>
+      <p>Two things, and neither blocks anything on my side.</p>
+    </div>
+    <div class="notes">
+      <p><b>The destination link.</b> Still the open item from the last round. These are ready
+        to run as soon as there is a URL for the buttons to point at.</p>
+      <p><b>Whether you want the word RESEARCH off the vial.</b> Covered above. It is one
+        answer and a quick re-render.</p>
+    </div>
+  </section>
+</div>
+
+<style>
+.notes p { margin:0 0 14px; color:var(--ink2); font-size:14.5px; line-height:1.6; }
+.notes b { color:var(--ink); }
+</style>
