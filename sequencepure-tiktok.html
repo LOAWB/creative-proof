@@ -1,0 +1,168 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Axion Static Set</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin:26px 0 6px;
+    padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px;color:var(--ink)}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px;line-height:1.5}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);
+    color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px;white-space:nowrap}
+.dl a.btn:hover{opacity:.88}
+.ratio{margin:34px 0 0}
+.ratio h3{font-family:var(--display);font-size:17px;margin:0 0 3px;color:var(--ink)}
+.ratio p.note{margin:0 0 14px;color:var(--ink2);font-size:13.5px}
+.rgrid{display:grid;gap:13px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.rgrid figure{margin:0}
+.rgrid img{width:100%;display:block;border-radius:9px;border:1px solid var(--rule-soft);background:var(--sunk)}
+.rgrid figcaption{margin-top:6px;font-size:11.5px;color:var(--ink3);font-family:var(--mono)}
+
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --accent-soft:#E7EAEE;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --accent-soft:#1E2530;
+  --flag:#D2A272; --flag-bg:#2A2015;
+  --ok:#7FBF9C; --ok-bg:#16241D;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 88px;display:flex;flex-direction:column;gap:52px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink3);margin:0}
+
+/* masthead */
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(30px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:62ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--rule);border-radius:3px;
+  background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* plate */
+.plate{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:30px;align-items:start}
+.plate img{width:100%;border:1px solid var(--rule);border-radius:3px;display:block;background:var(--panel)}
+.plate .body{display:flex;flex-direction:column;gap:13px}
+.plate h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.plate p{margin:0;color:var(--ink2);font-size:15px;max-width:56ch}
+.plate strong{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:3px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.03em;padding:4px 9px;border-radius:2px;
+  background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+
+/* sheet */
+.sheet{display:flex;flex-direction:column;gap:20px}
+.sheet-head{display:flex;flex-direction:column;gap:7px;border-bottom:1px solid var(--rule);padding-bottom:15px}
+.sheet-head h2{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.01em}
+.sheet-head p{margin:0;color:var(--ink2);font-size:15px;max-width:64ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:26px}
+.ad{display:flex;flex-direction:column;gap:12px;min-width:0}
+.shot{background:var(--sunk);border:1px solid var(--rule);border-radius:3px;overflow:hidden;line-height:0}
+.shot img{width:100%;display:block}
+.cap{display:flex;flex-direction:column;gap:5px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:2px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:.03em}
+
+/* notes */
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 26px;
+  display:flex;flex-direction:column;gap:16px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;
+  font-family:var(--mono);letter-spacing:.02em}
+@media (max-width:680px){.plate{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<style>
+ body{margin:0}
+ .wrap{max-width:820px;margin:0 auto;padding:48px 20px 90px}
+ h1{font-size:30px;line-height:1.2;margin:0 0 22px}
+ h2{font-size:19px;margin:38px 0 12px}
+ p{font-size:15.5px;line-height:1.65;margin:0 0 14px}
+ ol{font-size:15.5px;line-height:1.65;padding-left:22px}
+ li{margin:0 0 7px}
+ hr{border:0;border-top:1px solid rgba(128,128,128,.28);margin:34px 0}
+ code{font-size:14px;padding:1px 5px;border-radius:4px;background:rgba(128,128,128,.16)}
+</style></head><body><div class="wrap">
+<h1>TikTok tracking for sequencepure.com: the full setup, from the first step</h1>
+<p>This is everything needed to get TikTok tracking working on the site, in order. Steps 1 and 2 need someone with access to the TikTok account and a phone. Everything after that can be handled for you.</p>
+<p>Right now the site has Google Analytics and a Snapchat pixel on it. There is no TikTok pixel of any kind, so TikTok currently cannot see a single visit, add to cart or purchase.</p>
+<hr>
+<h2>Step 1. Finish the phone verification on the TikTok account
+TikTok will not open Events Manager until the account has a verified phone number. It sends a code
+by SMS, so it has to be done by whoever holds that phone.</h2>
+<ol><li>Sign in at ads.tiktok.com</li><li>If a banner says &quot;Verify your phone number for security&quot;, click it. If not, open</li><li>   Settings, then Account settings, and verify the number there.</li><li>Enter the code TikTok sends.</li></ol>
+<p><b>If the code does not arrive</b>, the usual causes are a number already attached to another TikTok account, or a carrier blocking the short code. Try a different number on the account, and check that the country dial code is right.</p>
+<h2>Step 2. Turn off the ad blocker for TikTok
+Whatever browser is used for this, AdBlock or similar must be paused for ads.tiktok.com. TikTok&#x27;s
+own pages will not render properly behind it. It also blocks tracking requests, which later makes a
+perfectly healthy pixel look broken when it is being tested.</h2>
+<hr>
+<h2>Step 3. Create the pixel
+1. In TikTok Ads Manager, open <b>Events Manager</b>, then <b>Web Events</b>.
+2. Click <b>Set up Web Events</b>, choose <b>TikTok Pixel</b>, then <b>Manually install pixel code</b>.
+   Do not pick a partner or &quot;Developer Mode&quot; install. The code is going in by hand through the
+   site&#x27;s snippet plugin, which gives more control than the plugin route.
+3. Name it something obvious, for example <code>Sequence Pure - Web</code>.
+4. Choose <b>Standard Mode</b>.
+5. Copy the <b>Pixel ID</b>. It is a short string of letters and numbers. That ID is the one thing
+   needed to make the browser half work.</h2>
+<h2>Step 4. Create the Events API access token
+This is the piece that makes server side tracking possible. It cannot be generated from the website
+end, only from inside TikTok.</h2>
+<ol><li>Still in Events Manager, open the pixel just created.</li><li>Go to <b>Settings</b>, then find <b>Events API</b>.</li><li>Click <b>Generate Access Token</b>.</li><li>Copy it once and keep it somewhere safe. TikTok will not show it again.</li></ol>
+<hr>
+<h2>Step 5. The browser half goes in through WPCode
+The site already has WPCode installed and active, so nothing new needs to be bought or added.</h2>
+<ol><li>In WordPress, open <b>Code Snippets</b>, then <b>Add Snippet</b>, then <b>Add Your Custom Code</b>.</li><li>Name it <code>TikTok Pixel - base</code>.</li><li>Set the code type to <b>HTML Snippet</b>.</li><li>Paste the pixel base code from TikTok, which already contains the Pixel ID.</li><li>Set the location to <b>Site Wide Header</b>.</li><li>Save and set it to <b>Active</b>.</li></ol>
+<p>Then a second snippet handles the shop events (product views, add to cart, checkout and purchase), so TikTok sees what people actually do rather than only that they arrived.</p>
+<h2>Step 6. The server half
+A second snippet sends the same events directly from the site&#x27;s server to TikTok using the access
+token from step 4. This matters because browser tracking alone loses a large share of events to ad
+blockers, iOS privacy settings and people bouncing before the page finishes loading.</h2>
+<p><b>The one thing that must not be got wrong:</b> the browser event and the server event for the same action have to carry the same event ID. If they do not, TikTok counts one purchase as two, and the reporting will overstate results while the cost per purchase looks better than it really is.</p>
+<hr>
+<h2>Step 7. Check it actually works
+Do not trust a green tick on its own.</h2>
+<ol><li>In Events Manager open <b>Test Events</b> and follow the on screen instructions.</li><li>With the ad blocker off, visit the site, open a product, add it to the cart and begin checkout.</li><li>Each event should appear in Test Events within a few seconds, and should show up twice, once</li><li>   from the browser and once from the server, deduplicated into a single event.</li><li>If an event never appears, the usual causes in order are: the ad blocker is still on, the</li><li>   snippet is saved but not set to Active, or caching is serving an older copy of the page. Clear</li><li>   the site cache and try again.</li></ol>
+<hr>
+<h2>What is needed to move
+Only two values are blocking everything from step 5 onward: the <b>Pixel ID</b> from step 3 and the
+<b>Events API access token</b> from step 4. Once those exist, the rest is quick.</h2>
+</div></body></html>
