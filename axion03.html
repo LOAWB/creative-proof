@@ -1,0 +1,229 @@
+<!doctype html><meta charset="utf-8">
+<title>Axion Research, static set three</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#ECEDEA; --panel:#FFFFFF; --sunk:#E2E4E0;
+  --ink:#16181A; --ink2:#5C6469; --ink3:#878E92;
+  --rule:#D3D7D2; --rule-soft:#E4E7E3;
+  --accent:#3D4A5C; --ok:#2F6B4F; --ok-bg:#E6EFE9;
+  --flag:#8A5A2B; --flag-bg:#F4EADF;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --ok:#7FBF9C; --ok-bg:#16241D;
+  --flag:#D2A272; --flag-bg:#2A2015;
+}}
+:root[data-theme="dark"]{
+  --ground:#101211; --panel:#191C1B; --sunk:#141716;
+  --ink:#E9ECE9; --ink2:#9BA3A3; --ink3:#727A7A;
+  --rule:#2A2E2D; --rule-soft:#212524;
+  --accent:#9FB3C8; --ok:#7FBF9C; --ok-bg:#16241D;
+  --flag:#D2A272; --flag-bg:#2A2015;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 16px 88px;display:flex;flex-direction:column;gap:50px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);margin:0}
+.mast{display:flex;flex-direction:column;gap:14px;border-bottom:1px solid var(--rule);padding-bottom:26px}
+.mast h1{font-family:var(--display);font-size:clamp(28px,5vw,46px);font-weight:700;letter-spacing:-.02em;line-height:1.04}
+.mast .sub{color:var(--ink2);max-width:64ch;font-size:15.5px;margin:0}
+.runbar{display:flex;flex-wrap:wrap;border:1px solid var(--rule);border-radius:3px;background:var(--panel);overflow:hidden;margin-top:6px}
+.run{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule-soft);min-width:0}
+.run:last-child{border-right:0}
+.run dt{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin:0 0 3px}
+.run dd{margin:0;font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.ad{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:28px;align-items:start;
+  border-top:1px solid var(--rule);padding-top:28px}
+.cap{display:flex;flex-direction:column;gap:6px;min-width:0}
+.key{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--accent);margin:0}
+.cap h3{font-family:var(--display);font-size:19px;font-weight:600;letter-spacing:-.01em}
+.arg{margin:0;font-size:14.5px;color:var(--ink);font-weight:500}
+.dev{margin:0;font-size:13.5px;color:var(--ink2)}
+.skin{margin:4px 0 0;font-family:var(--mono);font-size:11px;color:var(--ink3)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.pair figure{margin:0;min-width:0}
+.pair img{width:100%;display:block;border-radius:4px;border:1px solid var(--rule);background:var(--sunk)}
+.pair figcaption{margin-top:6px;font-family:var(--mono);font-size:11px;color:var(--ink3)}
+.notes{border:1px solid var(--rule);border-radius:3px;background:var(--panel);padding:24px 22px;display:flex;flex-direction:column;gap:14px}
+.notes h2{font-family:var(--display);font-size:19px;font-weight:600}
+.notes ul{margin:0;padding-left:19px;display:flex;flex-direction:column;gap:9px}
+.notes li{font-size:14.5px;color:var(--ink2)}
+.notes li strong{color:var(--ink);font-weight:600}
+.flag{border-left:2px solid var(--flag);background:var(--flag-bg);padding:12px 15px;border-radius:0 3px 3px 0}
+.flag p{margin:0;font-size:14px;color:var(--ink)}
+.chip{display:inline-block;font-family:var(--mono);font-size:11px;padding:4px 9px;border-radius:2px;background:var(--ok-bg);color:var(--ok);border:1px solid color-mix(in srgb,var(--ok) 24%,transparent)}
+.dl{display:flex;flex-wrap:wrap;align-items:center;gap:18px;padding:20px 22px;background:var(--panel);border:1px solid var(--rule);border-radius:14px}
+.dl .txt{flex:1 1 300px;min-width:0}
+.dl h3{margin:0 0 4px;font-family:var(--display);font-size:18px}
+.dl p{margin:0;color:var(--ink2);font-size:13.5px}
+.dl a.btn{display:inline-block;padding:13px 24px;border-radius:10px;background:var(--ink);color:var(--ground);text-decoration:none;font-weight:650;font-size:14.5px}
+footer{border-top:1px solid var(--rule);padding-top:18px;color:var(--ink3);font-size:13px;font-family:var(--mono)}
+@media (max-width:760px){.ad{grid-template-columns:1fr}}
+</style>
+<div class="wrap">
+  <header class="mast">
+    <p class="eyebrow">Axion Research &middot; static set three</p>
+    <h1>Seven arguments, built the way you pointed at</h1>
+    <p class="sub">This is the new set you asked for, made with the same method as the MRP ads
+      rather than the one set two used. Each ad is a single photographic scene with the vial
+      standing in it, and every word is placed afterwards in code over that scene. Nothing is
+      drawn as type by the image model, so nothing can come out misspelled. Square and nine by
+      sixteen are composed separately rather than cropped from one another, and the vial is
+      seeded from your own product shot, so the glass, the blue cap, the crimp and the label are
+      the real ones.</p>
+    <div class="runbar">
+      <div class="run"><dt>Ads</dt><dd>7 arguments, 14 files</dd></div>
+      <div class="run"><dt>Aspects</dt><dd>1:1 and 9:16</dd></div>
+      <div class="run"><dt>Render cost</dt><dd>$2.84</dd></div>
+      <div class="run"><dt>Status</dt><dd>Paused, nothing live</dd></div>
+    </div>
+  </header>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 01 &middot; CROSSED</p>
+      <h3>Proof over promise</h3>
+      <p class="arg">PROOF. A document beats a promise.</p>
+      <p class="dev">A document beats a promise. The struck word sets up the swap, VERIFY lands it, and the line underneath says exactly what ships with every lot.</p>
+      <p class="skin">scene aurora-ridge &middot; cta VIEW COA</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-01-1x1.jpg" alt="Ad 1 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-01-9x16.jpg" alt="Ad 1 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 02 &middot; QUESTION BASED</p>
+      <h3>The question most buyers cannot answer</h3>
+      <p class="arg">THE QUESTION. Most buyers cannot answer it.</p>
+      <p class="dev">Asks the reader something about their own last purchase. The answer is uncomfortable, which is the point, and the sub gives them the way out.</p>
+      <p class="skin">scene glacier-core &middot; cta VIEW COA</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-02-1x1.jpg" alt="Ad 2 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-02-9x16.jpg" alt="Ad 2 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 03 &middot; QUIZ</p>
+      <h3>Pick one</h3>
+      <p class="arg">PICK ONE. The answer is the paperwork.</p>
+      <p class="dev">A quiz that only has one honest answer. The third option is the product, and the closing line makes it a fact rather than a boast.</p>
+      <p class="skin">scene clean-room &middot; cta VIEW COA</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-03-1x1.jpg" alt="Ad 3 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-03-9x16.jpg" alt="Ad 3 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 04 &middot; NEWS</p>
+      <h3>The standard</h3>
+      <p class="arg">THE STANDARD. Documented end to end.</p>
+      <p class="dev">Read as a notice rather than an ad. Documented end to end, with the lot number and the certificate named as a pair.</p>
+      <p class="skin">scene brushed-steel &middot; cta LEARN MORE</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-04-1x1.jpg" alt="Ad 4 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-04-9x16.jpg" alt="Ad 4 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 05 &middot; NEGATIVE</p>
+      <h3>The reversal</h3>
+      <p class="arg">THE REVERSAL. Slow the buyer down on purpose.</p>
+      <p class="dev">Tells the reader not to buy, then gives the condition. It slows the scroll on purpose and still ends on the certificate.</p>
+      <p class="skin">scene deep-current &middot; cta VIEW COA</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-05-1x1.jpg" alt="Ad 5 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-05-9x16.jpg" alt="Ad 5 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 06 &middot; FEATURES</p>
+      <h3>What you get</h3>
+      <p class="arg">WHAT YOU GET. Four things you can see.</p>
+      <p class="dev">Four things a buyer can physically check when the box arrives. No claim about what the compound does, only about what is in the box.</p>
+      <p class="skin">scene beaded-glass &middot; cta LEARN MORE</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-06-1x1.jpg" alt="Ad 6 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-06-9x16.jpg" alt="Ad 6 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="cap">
+      <p class="key">AD 07 &middot; US VS THEM</p>
+      <h3>Documented against undocumented</h3>
+      <p class="arg">THE COMPARISON. Documented against undocumented.</p>
+      <p class="dev">The comparison, with our own column on the light side. Both columns are things you can verify, not adjectives.</p>
+      <p class="skin">scene paired-plinths &middot; cta LEARN MORE</p>
+    </div>
+    <div class="pair">
+      <figure><img src="axion03/ad-07-1x1.jpg" alt="Ad 7 square"><figcaption>1:1</figcaption></figure>
+      <figure class="tall"><img src="axion03/ad-07-9x16.jpg" alt="Ad 7 vertical"><figcaption>9:16</figcaption></figure>
+    </div>
+  </section>
+  <div class="dl">
+    <div class="txt"><h3>Full resolution files</h3>
+      <p>All fourteen at full size, 1080 by 1080 and 1080 by 1920 PNG.</p></div>
+    <a class="btn" href="axion-statics-03.zip">Download the set</a>
+  </div>
+  <div class="notes">
+    <h2>What is in here and what is not</h2>
+    <ul>
+      <li><strong>No offer language anywhere.</strong> No discount, no code, no percentage and
+        no number that reads as one, no dose and no compound name. Every factual line is your
+        own published wording from axionyxresearch.com: the certificate with every lot, and
+        third party tested, always verified.</li>
+      <li><strong>The purity figure is deliberately left off</strong> even though your site
+        publishes it, because a percentage on artwork is a risk regardless of who says it.</li>
+      <li><strong>Copy is placed by code, not drawn.</strong> That is the whole reason for this
+        method. It also means any wording change is free and instant, with no new render.</li>
+      <li><strong>I looked at all fourteen at full size myself</strong> before you saw any of
+        them. That pass found seven files where a line of copy was sitting across the vial, and
+        all seven are fixed in what you are looking at. Nothing was re-rendered to fix them and
+        it cost nothing.</li>
+      <li><span class="chip">checked</span> Every one of the fourteen carries the correct Axion
+        vial with the label readable. That is the check no automatic test can do, and it is the
+        one that matters most.</li>
+    </ul>
+    <div class="flag">
+      <p><strong>One thing to decide.</strong> On the comparison ad, both vials in the photograph
+        are Axion vials, so the column headed no paperwork sits above one of ours. It reads fine
+        as a generic before and after, but if you would rather the left side were clearly not our
+        product, say so and I will rebuild that one scene.</p>
+    </div>
+    <div class="flag">
+      <p><strong>On the last set.</strong> Your screenshot did not say the ads were rejected. It
+        said the ad requires a manual review that can take five to seven business days, over a
+        note about issues on five ads, and that campaign holds exactly five ads. So the whole set
+        was swept into review rather than any one creative being picked out. If this set lands in
+        the same queue, that is not a verdict on the creative either, which is exactly the thing
+        running it settles.</p>
+    </div>
+  </div>
+  <footer>Axion Research &middot; static set three &middot; prepared 22 September 2026 &middot; stage paused</footer>
+</div>
