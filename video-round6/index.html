@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Round 6 Set</title>
+<style>
+  :root{--bg:#0b0d10;--card:#14181d;--line:#232a31;--tx:#eef2f6;--sub:#93a1ad;--axion:#5cc6ff;--mrp:#8fb4ff}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+  .wrap{max-width:820px;margin:0 auto;padding:28px 16px 60px}
+  h1{font-size:22px;margin:0 0 6px}
+  .lead{color:var(--sub);font-size:14px;line-height:1.5;margin:0}
+  .sec{margin-top:28px}
+  .sec h2{font-size:13px;text-transform:uppercase;letter-spacing:1.6px;margin:0 0 14px;color:var(--sub)}
+  .sec.axion h2 span{color:var(--axion)} .sec.mrp h2 span{color:var(--mrp)}
+  .grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:520px){.grid{grid-template-columns:1fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .card video{width:100%;display:block;background:#000;aspect-ratio:9/16}
+  .cap{padding:10px 12px 12px}
+  .cap .n{font-size:13.5px;font-weight:600;margin:0}
+  .cap .d{font-size:12.5px;color:var(--sub);margin:4px 0 0;line-height:1.4}
+  footer{margin-top:30px;color:var(--sub);font-size:12px;line-height:1.5;text-align:center}
+</style></head><body>
+<div class="wrap">
+  <h1>Round 6 Set</h1>
+  <p class="lead">Clean backgrounds, and every clip does something different with the vials. Headline types in word by word, a different original track on each, no COA sheet at the end.</p>
+  <section class="sec axion"><h2><span>Axion</span></h2><div class="grid" id="axion"></div></section>
+  <section class="sec mrp"><h2><span>MRP</span></h2><div class="grid" id="mrp"></div></section>
+  <footer>Test only, nothing is loaded anywhere.</footer>
+</div>
+<script>
+  var clips={axion:[["axion-orbit","Orbit","Three vials circle in depth, slow down, the front one settles. Bossa nova."],
+                    ["axion-shelves","Shelves","Vials drop onto glowing shelves, 3 then 2 then 1. Nu disco."],
+                    ["axion-magnifier","Magnifier","A lens reads down the label, proof tags land beside it. Electro swing."],
+                    ["axion-conveyor","Conveyor","Vials ride through a scan gate and each picks up a COA tag. Dembow."]],
+             mrp:[["mrp-sphere","Glass sphere","Three vials drop into a glass sphere and turn inside. Amapiano."],
+                  ["mrp-flip","Flip","One vial is tossed, flips twice, lands, camera pushes in. Jersey club."],
+                  ["mrp-countup","Count up","A grid fills one vial at a time while the lot and COA count ticks. Chiptune."],
+                  ["mrp-spotlight","Spotlight","A spotlight sweeps a dark row and one vial rises to camera. Phonk."]]};
+  function build(id){var h=document.getElementById(id);clips[id].forEach(function(c){
+    var card=document.createElement("div");card.className="card";
+    var v=document.createElement("video");v.src=c[0]+".mp4";v.controls=true;v.playsInline=true;v.preload="metadata";v.setAttribute("webkit-playsinline","");
+    var cap=document.createElement("div");cap.className="cap";var p=document.createElement("p");p.className="n";p.textContent=c[1];
+    var d=document.createElement("p");d.className="d";d.textContent=c[2];cap.appendChild(p);cap.appendChild(d);
+    card.appendChild(v);card.appendChild(cap);h.appendChild(card);});}
+  build("axion");build("mrp");
+</script></body></html>
